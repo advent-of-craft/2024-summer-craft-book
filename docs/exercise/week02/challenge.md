@@ -12,8 +12,6 @@ _Remember that a developer never forgets his/her craft. He/She just adds to it._
 
 May your journey continue!
 
-- <u>💡HINT:</u> Apply what you learned on day 1
-
 ![snippet of the day](snippet.png)
 
 ### Proposed Solution
