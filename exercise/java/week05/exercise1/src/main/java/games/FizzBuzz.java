@@ -1,5 +1,8 @@
 package games;
 
+import java.security.Provider;
+import java.util.Map;
+
 public class FizzBuzz {
     public static final int MIN = 0;
     public static final int MAX = 100;
