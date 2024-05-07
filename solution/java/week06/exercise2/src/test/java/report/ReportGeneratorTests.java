@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ReportGeneratorTests {
@@ -27,35 +26,41 @@ public class ReportGeneratorTests {
 
     @Test
     public void generateReportInCSV() {
-        ReportGenerator generator = new CsvReportGenerator();
         List<ReportData> data = List.of(
                 new ReportData(1, 100.0, "Sample Data 1"),
                 new ReportData(2, 200.0, "Sample Data 2")
         );
-        generator.generateReport(data);
+
+        var generator = new ReportGenerator();
+        var report = generator.generateReport(ReportType.CSV, data);
+        report.onSuccess(System.out::println)
+                .onFailure(System.err::println);
 
         Approvals.verify(outContent.toString());
     }
 
     @Test
     public void generateReportInPDF() {
-        ReportGenerator generator = new PdfReportGenerator();
         List<ReportData> data = List.of(
                 new ReportData(1, 100.0, "Sample Data 1"),
                 new ReportData(2, 200.0, "Sample Data 2")
         );
-        generator.generateReport(data);
+
+        var generator = new ReportGenerator();
+        var report = generator.generateReport(ReportType.PDF, data);
+        report.onSuccess(System.out::println)
+                .onFailure(System.err::println);
 
         Approvals.verify(outContent.toString());
     }
 
     @Test
     public void generateReportInPDFShouldFailIfReportDataIsEmpty() {
-        ReportGenerator generator = new PdfReportGenerator();
-        List<ReportData> data = null;
-        generator.generateReport(data);
+        var generator = new ReportGenerator();
+        var report = generator.generateReport(ReportType.PDF, null);
+        report.onSuccess(System.out::println)
+                .onFailure(System.err::println);
 
-        //TODO: assert exception
-        Approvals.verify(outContent.toString());
+        assert report.isFailure();
     }
 }

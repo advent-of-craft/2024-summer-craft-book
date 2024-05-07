@@ -2,14 +2,12 @@ package report;
 
 import java.util.List;
 
-public class CsvReportGenerator implements ReportGenerator {
+public class CsvReportGenerator implements CanGenerateReport {
     @Override
-    public void generateReport(List<ReportData> data) {
-        System.out.println("Starting CSV Report Generation...");
-        System.out.println("CSV Header: ID, Value, Description");
-        for (ReportData d : data) {
-            System.out.println(d.getId() + "," + d.getValue() + "," + d.getDescription());
-        }
-        System.out.println("CSV Report Generated Successfully.");
+    public String generateReport(List<ReportData> data) {
+        StringBuilder sb = new StringBuilder("Starting CSV Report Generation...\nCSV Header: ID, Value, Description\n");
+        data.forEach(d -> sb.append(d.getId()).append(",").append(d.getValue()).append(",").append(d.getDescription()).append("\n"));
+        sb.append("CSV Report Generated Successfully.");
+        return sb.toString();
     }
 }
