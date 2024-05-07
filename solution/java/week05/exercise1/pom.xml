@@ -10,6 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>password-validation</artifactId>
+    <artifactId>fizzbuzz-comes-back</artifactId>
     <version>1.0-SNAPSHOT</version>
+    
 </project>
