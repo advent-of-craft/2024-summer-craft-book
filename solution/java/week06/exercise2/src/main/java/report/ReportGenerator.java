@@ -9,11 +9,8 @@ import java.util.Map;
 class ReportGenerator {
     private final Map<ReportType, CanGenerateReport> reportGenerators;
 
-    public ReportGenerator() {
-        reportGenerators = Map.of(
-                ReportType.CSV, new CsvReportGenerator(),
-                ReportType.PDF, new PdfReportGenerator()
-        );
+    public ReportGenerator(Map<ReportType, CanGenerateReport> reportGenerators) {
+        this.reportGenerators = reportGenerators;
     }
 
     public Try<String> generateReport(ReportType reportType, List<ReportData> data) {
