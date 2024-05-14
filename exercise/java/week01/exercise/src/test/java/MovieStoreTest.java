@@ -1,7 +1,10 @@
 import static org.junit.Assert.*;
 
+import movie.Movie;
 import movie.MovieStore;
 import org.junit.*;
+
+import java.util.List;
 
 public class MovieStoreTest {
     private MovieStore store;
@@ -10,6 +13,8 @@ public class MovieStoreTest {
     public void setUp() {
         store = new MovieStore();
         store.addMovie("001", "Inception", "Christopher Nolan", 10);
+        store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8);
+        store.addMovie("003", "Dunkirk", "Christopher Nolan", 5);
     }
 
     @Test
@@ -39,8 +44,20 @@ public class MovieStoreTest {
     }
 
     @Test
-    public void testDisplayMovies() {
-        store.displayMovies();
-        assertTrue("There should be a mechanism to capture console outputs", true);
+    public void testGetTotalMovies() {
+        assertEquals("Total number of movies should be 3", 3, store.getTotalMovies());
+    }
+
+    @Test
+    public void testFindMoviesByTitle() {
+        List<Movie> movies = store.findMoviesByTitle("Inception");
+        assertEquals("Should find one movie", 1, movies.size());
+        assertEquals("Movie title should be 'Inception'", "Inception", movies.get(0).title);
+    }
+
+    @Test
+    public void testGetMoviesByDirector() {
+        List<Movie> movies = store.getMoviesByDirector("Christopher Nolan");
+        assertEquals("Should find two movies by Christopher Nolan", 2, movies.size());
     }
 }
