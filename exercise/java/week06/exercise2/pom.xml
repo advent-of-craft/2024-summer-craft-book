@@ -4,21 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>week6-exercise2</groupId>
-    <artifactId>summer-holiday-notebook</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <parent>
+        <groupId>com.advent-of-craft</groupId>
+        <artifactId>summer-holiday-notebook</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>21</source>
-                    <target>21</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <artifactId>reportgenerator</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
 </project>

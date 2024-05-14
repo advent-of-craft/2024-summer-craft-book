@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>wk2exercise1</artifactId>
+    <artifactId>fizzbuzz</artifactId>
     <version>1.0-SNAPSHOT</version>
     
 </project>
