@@ -4,17 +4,37 @@ import java.util.*;
 
 public class MovieStore {
     public HashMap<String, Movie> allMovies;
+    public StoreAccount sales;
 
     public MovieStore() {
         allMovies = new HashMap<>();
+        sales = new StoreAccount();
     }
 
-    public void addMovie(String id, String title, String director, int totalCopies) {
+    public void buyMovie(String customer, String id) {
+        Movie movie = allMovies.get(id);
+        if (movie != null) {
+            if (movie.totalCopies - movie.borrowedCopies > 0) {
+                movie.totalCopies--;
+                if(movie.canSell()) {
+                    sales.sell(movie, customer);
+                }
+                else
+                    System.out.println("Movie not for sale");
+            } else {
+                System.out.println("All copies are currently borrowed.");
+            }
+        } else {
+            System.out.println("Movie not available!");
+        }
+    }
+
+    public void addMovie(String id, String title, String director, int totalCopies, Double unitPrice) {
         if (allMovies.containsKey(id)) {
             System.out.println("Movie already exists! Updating total copies.");
             updateMovieCopies(id, totalCopies);
         } else {
-            allMovies.put(id, new Movie(id, title, director, totalCopies));
+            allMovies.put(id, new Movie(id, title, director, totalCopies, unitPrice));
         }
     }
 

@@ -12,14 +12,14 @@ public class MovieStoreTest {
     @Before
     public void setUp() {
         store = new MovieStore();
-        store.addMovie("001", "Inception", "Christopher Nolan", 10);
-        store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8);
-        store.addMovie("003", "Dunkirk", "Christopher Nolan", 5);
+        store.addMovie("001", "Inception", "Christopher Nolan", 10, 0d);
+        store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8, 0d);
+        store.addMovie("003", "Dunkirk", "Christopher Nolan", 5, 0d);
     }
 
     @Test
     public void testAddMovie() {
-        store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8);
+        store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8, 0d);
         assertNotNull("Movie should not be null", store.allMovies.get("002")); // Checks for not null but not for correct properties
         assertEquals("Incorrect count of total copies", 8, store.allMovies.get("002").totalCopies);
     }
@@ -37,8 +37,17 @@ public class MovieStoreTest {
     }
 
     @Test
+    public void testBuyMovie() {
+        var movie = store.allMovies.get("001");
+        movie.unitPrice = 5d;
+
+        store.buyMovie("Durant", "001");
+
+        assertEquals("Movie bought should decrease all copies", 9, store.allMovies.get("001").totalCopies);
+    }
+
+    @Test
     public void testReturnMovie() {
-        store.borrowMovie("001");
         store.returnMovie("001");
         assertEquals("Borrowed copies should be decremented", 0, store.allMovies.get("001").borrowedCopies);
     }
