@@ -42,7 +42,11 @@ public class MovieStore {
     public void borrowMovie(String id) {
         Movie movie = allMovies.get(id);
         if (movie != null) {
-            movie.borrowMovie();
+            if (movie.totalCopies - movie.borrowedCopies > 0) {
+                movie.borrowedCopies++;
+            } else {
+                System.out.println("All copies are currently borrowed.");
+            }
         } else {
             System.out.println("Movie not available!");
         }
@@ -51,7 +55,11 @@ public class MovieStore {
     public void returnMovie(String id) {
         Movie movie = allMovies.get(id);
         if (movie != null) {
-            movie.returnMovie();
+            if (movie.borrowedCopies > 0) {
+                movie.borrowedCopies--;
+            } else {
+                System.out.println("Error: No copies were borrowed.");
+            }
         } else {
             System.out.println("Invalid movie ID!");
         }
