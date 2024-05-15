@@ -9,12 +9,19 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-		<module>week02</module>
-		<module>week03</module>
+		<module>week01/exercise</module>
+		<module>week02/exercise1</module>
+		<module>week02/exercise2</module>
+		<module>week03/exercise1</module>
+		<module>week03/exercise2</module>
 		<module>week04</module>
-		<module>week05</module>
-		<module>week06</module>
-        <module>week07</module>
+		<module>week05/exercise1</module>
+		<module>week05/exercise2</module>
+		<module>week06/exercise1</module>
+		<module>week06/exercise2</module>
+		<module>week06/game</module>
+		<module>week07/exercise</module>
+		<module>week07/game</module>
     </modules>
 
     <properties>
@@ -22,8 +29,11 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.10.0</junit.version>
+        <junit.core.version>4.13.2</junit.core.version>
         <assertJ.version>3.24.2</assertJ.version>
         <maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
+        <com.amazonaws.version>1.0.0</com.amazonaws.version>
+        <com.google.code.gson.version>2.8.9</com.google.code.gson.version>
     </properties>
 
     <build>
@@ -63,6 +73,23 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertJ.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.core.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-lambda-java-core</artifactId>
+            <version>${com.amazonaws.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${com.google.code.gson.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
