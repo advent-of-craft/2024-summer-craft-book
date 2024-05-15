@@ -1,6 +1,8 @@
 package movie;
 
+//Anemic domain anti-pattern: the entity Movie has no behavior
 public class Movie {
+    //Inconsistent naming
     public String movieID;
     public String title;
     public String director;
@@ -17,7 +19,9 @@ public class Movie {
         this.borrowedCopies = 0;
     }
 
+    //Fragile implementation: a movie with a zero price cannot be sold?
     public boolean canSell() {
+        //Incomplete rule: what is the unit price is negative?
         return unitPrice != 0d;
     }
 }

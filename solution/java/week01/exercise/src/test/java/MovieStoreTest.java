@@ -9,6 +9,7 @@ import java.util.List;
 public class MovieStoreTest {
     private MovieStore store;
 
+    //Tests interdependency: the setup assumes a set of movies for all tests which makes them prone to fail.
     @Before
     public void setUp() {
         store = new MovieStore();
@@ -20,7 +21,9 @@ public class MovieStoreTest {
     @Test
     public void testAddMovie() {
         store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8, 0d);
-        assertNotNull("Movie should not be null", store.allMovies.get("002")); // Checks for not null but not for correct properties
+        //Weak assertions: Checks for not null but not for correct properties
+        assertNotNull("Movie should not be null", store.allMovies.get("002"));
+        //Implementation leak: tight to the implementation details of MovieStore
         assertEquals("Incorrect count of total copies", 8, store.allMovies.get("002").totalCopies);
     }
 
@@ -39,6 +42,7 @@ public class MovieStoreTest {
     @Test
     public void testBuyMovie() {
         var movie = store.allMovies.get("001");
+        //Mutable state between tests: changing global set for a specific state
         movie.unitPrice = 5d;
 
         store.buyMovie("Durant", "001");

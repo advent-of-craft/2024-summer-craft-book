@@ -2,11 +2,17 @@ package movie;
 
 import java.util.*;
 
+//SPR violation: the movie store has too many responsibilities
 public class MovieStore {
+    //inconsistent naming
+    //Bad encapsulation: public field
     public HashMap<String, Movie> allMovies;
+    //confusing naming
+    //Bad encapsulation: public field
     public StoreAccount sales;
 
     public MovieStore() {
+        //we could inject some of the dependencies
         allMovies = new HashMap<>();
         sales = new StoreAccount();
     }
@@ -15,8 +21,11 @@ public class MovieStore {
         Movie movie = allMovies.get(id);
         if (movie != null) {
             if (movie.totalCopies - movie.borrowedCopies > 0) {
+                //Implementation leak: accessing fields of movie
                 movie.totalCopies--;
+                //Level of indentation too complex
                 if(movie.canSell()) {
+                    //Argument switching between customer and movie. Can lead to error passing arguments.
                     sales.sell(movie, customer);
                 }
                 else
@@ -25,11 +34,15 @@ public class MovieStore {
                 System.out.println("All copies are currently borrowed.");
             }
         } else {
+            //movie store logic tie to the console
+            //error handling using the console is a bad practice
             System.out.println("Movie not available!");
         }
     }
 
+    //Risk: we can add a movie with empty spaces as title?
     public void addMovie(String id, String title, String director, int totalCopies, Double unitPrice) {
+        //Confusing name: the name of the method does not say what it does (update copies and add movies).
         if (allMovies.containsKey(id)) {
             System.out.println("Movie already exists! Updating total copies.");
             updateMovieCopies(id, totalCopies);
@@ -39,6 +52,7 @@ public class MovieStore {
     }
 
     public void updateMovieCopies(String id, int newTotalCopies) {
+        //Performance: possibly multiple iterations
         if (allMovies.containsKey(id)) {
             Movie movie = allMovies.get(id);
             if (newTotalCopies < movie.borrowedCopies) {
@@ -61,6 +75,7 @@ public class MovieStore {
 
     public void borrowMovie(String id) {
         Movie movie = allMovies.get(id);
+        //Duplication: the research and check if a copy is available is duplicated in the buyMovie method
         if (movie != null) {
             if (movie.totalCopies - movie.borrowedCopies > 0) {
                 movie.borrowedCopies++;
@@ -72,6 +87,7 @@ public class MovieStore {
         }
     }
 
+    //Return, Borrow and Buy movie can be streamlined
     public void returnMovie(String id) {
         Movie movie = allMovies.get(id);
         if (movie != null) {
@@ -85,15 +101,18 @@ public class MovieStore {
         }
     }
 
+    //Dead code? the method is never used, never tested
     public void displayMovies() {
         for (Movie m : allMovies.values()) {
             System.out.println("ID: " + m.movieID + ", Title: " + m.title + ", Director: " + m.director + ", Available Copies: " + (m.totalCopies - m.borrowedCopies));
         }
     }
 
+    //Risk: no early return if, say, title is an empty string
     public List<Movie> findMoviesByTitle(String title) {
         List<Movie> result = new ArrayList<>();
         for (Movie m : allMovies.values()) {
+            //Bug: the research by title is case-sensitive
             if (m.title.equalsIgnoreCase(title)) {
                 result.add(m);
             }
