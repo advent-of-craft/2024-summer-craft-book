@@ -53,20 +53,9 @@ public class MovieStoreTest {
     }
 
     @Test
-    public void testGetTotalMovies() {
-        assertEquals("Total number of movies should be 3", 3, store.getTotalMovies());
-    }
-
-    @Test
     public void testFindMoviesByTitle() {
         List<Movie> movies = store.findMoviesByTitle("Inception");
         assertEquals("Should find one movie", 1, movies.size());
         assertEquals("Movie title should be 'Inception'", "Inception", movies.get(0).title);
-    }
-
-    @Test
-    public void testGetMoviesByDirector() {
-        List<Movie> movies = store.getMoviesByDirector("Christopher Nolan");
-        assertEquals("Should find two movies by Christopher Nolan", 2, movies.size());
     }
 }

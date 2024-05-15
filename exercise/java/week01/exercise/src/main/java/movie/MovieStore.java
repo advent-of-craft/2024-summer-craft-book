@@ -91,24 +91,10 @@ public class MovieStore {
         }
     }
 
-    public int getTotalMovies() {
-        return allMovies.size();
-    }
-
     public List<Movie> findMoviesByTitle(String title) {
         List<Movie> result = new ArrayList<>();
         for (Movie m : allMovies.values()) {
             if (m.title.equalsIgnoreCase(title)) {
-                result.add(m);
-            }
-        }
-        return result;
-    }
-
-    public List<Movie> getMoviesByDirector(String director) {
-        List<Movie> result = new ArrayList<>();
-        for (Movie m : allMovies.values()) {
-            if (m.director.equals(director)) {
                 result.add(m);
             }
         }
