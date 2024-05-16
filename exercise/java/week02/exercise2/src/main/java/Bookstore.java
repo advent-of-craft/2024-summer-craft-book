@@ -1,4 +1,6 @@
-public class Bookstore {
+import java.util.ArrayList;
+
+public class BookStore {
     private ArrayList<Book> inv = new ArrayList<>();
 
     public void addBook(String title, String author, int copies) {

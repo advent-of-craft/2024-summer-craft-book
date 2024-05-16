@@ -1,8 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
-private class Book {
+class Book {
     private String title;
     private String author;
     private int copies;
