@@ -20,7 +20,7 @@ public class MovieStoreTest {
     @Test
     public void testAddMovie() {
         store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8, 0d);
-        assertNotNull("Movie should not be null", store.allMovies.get("002")); // Checks for not null but not for correct properties
+        assertNotNull("Movie should not be null", store.allMovies.get("002"));
         assertEquals("Incorrect count of total copies", 8, store.allMovies.get("002").totalCopies);
     }
 
