@@ -41,6 +41,7 @@ public class MovieStore {
     }
 
     //Risk: we can add a movie with empty spaces as title?
+    //Maintenance overhead: the number of parameters is high. Passing a movie instead?
     public void addMovie(String id, String title, String director, int totalCopies, Double unitPrice) {
         //Confusing name: the name of the method does not say what it does (update copies and add movies).
         if (allMovies.containsKey(id)) {
