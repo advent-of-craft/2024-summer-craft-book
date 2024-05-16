@@ -1,13 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-private class Book {
-    private String title;
-    private String author;
+public class Book {
+    private final String title;
+    private final String author;
     private int copies;
 
-    public Book(String title, String author, int copies) {
+    private Book(String title, String author, int copies) {
         this.title = title;
         this.author = author;
         this.copies = copies;
@@ -35,5 +33,22 @@ private class Book {
 
     public int getCopies() {
         return copies;
+    }
+
+    public boolean hasCopies() {
+        return getCopies() > 0;
+    }
+
+    public static Optional<Book> tryCreateBook(String title, String author, int copies) {
+        if (informationInvalid(title, author, copies))
+            Optional.empty();
+
+        return Optional.of(new Book(title, author, copies));
+    }
+
+    public static boolean informationInvalid(String title, String author, int copies) {
+        return title == null
+                || author == null
+                || copies <= 0;
     }
 }
