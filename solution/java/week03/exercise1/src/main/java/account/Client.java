@@ -1,30 +1,36 @@
 package account;
 
 import java.util.Map;
-import java.util.stream.Collectors;
+
+import static java.lang.System.lineSeparator;
+import static java.util.stream.Collectors.joining;
 
 public class Client {
     private final Map<String, Double> orderLines;
-    private double totalAmount;
 
     public Client(Map<String, Double> orderLines) {
         this.orderLines = orderLines;
     }
 
     public String toStatement() {
-        return orderLines.entrySet().stream()
+        return orderLines.entrySet()
+                .stream()
                 .map(entry -> formatLine(entry.getKey(), entry.getValue()))
-                .collect(Collectors.joining(System.lineSeparator()))
-                .concat(System.lineSeparator() + "Total : " + totalAmount + "€");
+                .collect(joining(lineSeparator(), "", formatTotal()));
     }
 
     private String formatLine(String name, Double value) {
-        totalAmount += value;
         return name + " for " + value + "€";
     }
 
-    public double getTotalAmount() {
-        return totalAmount;
+    private String formatTotal() {
+        return lineSeparator() + "Total : " + totalAmount() + "€";
+    }
+
+    public Double totalAmount() {
+        return orderLines.values()
+                .stream()
+                .mapToDouble(x -> x)
+                .sum();
     }
 }
-
