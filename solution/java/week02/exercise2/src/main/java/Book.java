@@ -41,14 +41,14 @@ public class Book {
 
     public static Optional<Book> tryCreateBook(String title, String author, int copies) {
         if (informationInvalid(title, author, copies))
-            Optional.empty();
+            return Optional.empty();
 
         return Optional.of(new Book(title, author, copies));
     }
 
-    public static boolean informationInvalid(String title, String author, int copies) {
+    private static boolean informationInvalid(String title, String author, int copies) {
         return title == null
                 || author == null
-                || copies <= 0;
+                || copies < 0;
     }
 }

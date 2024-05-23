@@ -1,7 +1,7 @@
 import java.util.Optional;
 
 public class BookStore {
-    BookInventory inventory;
+    BookInventory inventory = new BookInventory();
 
     public void addBook(String title, String author, int copies) {
         if (copies <= 0)
@@ -26,7 +26,7 @@ public class BookStore {
         );
     }
 
-    private Optional<Book> getBookBy(String title, String author) {
+    protected Optional<Book> getBookBy(String title, String author) {
         return inventory.stream()
                 .filter(b ->
                     b.getTitle().equals(title)
