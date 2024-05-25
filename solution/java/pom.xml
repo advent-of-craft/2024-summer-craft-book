@@ -9,19 +9,19 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-		<module>week01/exercise</module>
-		<module>week02/exercise1</module>
-		<module>week02/exercise2</module>
-		<module>week03/exercise1</module>
-		<module>week03/exercise2</module>
-		<module>week04</module>
-		<module>week05/exercise1</module>
-		<module>week05/exercise2</module>
-		<module>week06/exercise1</module>
-		<module>week06/exercise2</module>
-		<module>week06/game</module>
-		<module>week07/exercise</module>
-		<module>week07/game</module>
+		<module>week01-code-analysis/exercise</module>
+		<module>week02-object-calisthenics/exercise1</module>
+		<module>week02-object-calisthenics/exercise2</module>
+		<module>week03-cqs/exercise1</module>
+		<module>week03-cqs/exercise2</module>
+		<module>week04-tdd</module>
+		<module>week05-complexity/exercise1</module>
+		<module>week05-complexity/exercise2</module>
+		<module>week06-legacy-code/exercise1</module>
+		<module>week06-legacy-code/exercise2</module>
+		<module>week06-legacy-code/game</module>
+		<module>week07-pbt/exercise</module>
+		<module>week07-pbt/game</module>
     </modules>
 
     <properties>
@@ -34,6 +34,8 @@
         <maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
         <com.amazonaws.version>1.0.0</com.amazonaws.version>
         <com.google.code.gson.version>2.8.9</com.google.code.gson.version>
+        <approvaltests.version>23.0.1</approvaltests.version>
+        <vavr.version>0.10.4</vavr.version>
     </properties>
 
     <build>
@@ -90,6 +92,16 @@
             <artifactId>gson</artifactId>
             <version>${com.google.code.gson.version}</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.approvaltests</groupId>
+            <artifactId>approvaltests</artifactId>
+            <version>${approvaltests.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr</artifactId>
+            <version>${vavr.version}</version>
         </dependency>
     </dependencies>
 </project>
