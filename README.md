@@ -1,4 +1,5 @@
 # Summer Holiday Notebook 2023
+- [Week 1: Code Analysis.](01-code-analysis/)
 - [Week 2: Fight indentation.](docs/exercise/week02)
 - [Week 3: Fix the code.](docs/exercise/week03)
 - [Week 4: A TDD adventure.](docs/exercise/week04)
