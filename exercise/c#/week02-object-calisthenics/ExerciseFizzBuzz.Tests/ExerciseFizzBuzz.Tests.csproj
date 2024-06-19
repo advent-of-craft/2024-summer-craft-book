@@ -7,6 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <RootNamespace>Week02.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Week02\Week02.csproj" />
+      <ProjectReference Include="..\ExerciseFizzBuzz\ExerciseFizzBuzz.csproj" />
     </ItemGroup>
 
 </Project>
