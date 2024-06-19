@@ -7,6 +7,8 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <AssemblyName>Week05.Tests</AssemblyName>
+        <RootNamespace>Week05.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Week04\Week04.csproj" />
+      <ProjectReference Include="..\ExerciseFizzBuzzComesBack\ExerciseFizzBuzzComesBack.csproj" />
     </ItemGroup>
 
 </Project>

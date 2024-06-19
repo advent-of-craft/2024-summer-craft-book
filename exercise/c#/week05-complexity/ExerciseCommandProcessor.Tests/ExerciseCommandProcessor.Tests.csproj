@@ -26,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Week05\Week05.csproj" />
+      <ProjectReference Include="..\ExerciseCommandProcessor\ExerciseCommandProcessor.csproj" />
     </ItemGroup>
 
 </Project>
