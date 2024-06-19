@@ -41,3 +41,10 @@ Choose your stack to do this exercise
 
 Here is the step by step:
 [![Proposed Solution Guide](../../img/proposed-solution.png)](solution/step-by-step.md)
+
+
+### Go further
+
+Taking notes as mind-map is a powerful tool to help remember information in a structured way. Here is an example of notes for code analysis
+
+Here are some [technics](https://www.goodnotes.com/blog/mind-mapping-methods) you can use with your favorite sharing board application.
