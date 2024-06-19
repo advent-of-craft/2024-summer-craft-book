@@ -29,9 +29,15 @@ What do you see?
 
 Choose your stack to do this exercise
 
-- [Java](exercise/java/week01-code-analysis/exercise/)
+- [Java](/exercise/java/week01-code-analysis/exercise/)
 - C# : ...
 - ...
 
-### Proposed Solution
+#### Proposed Solution
+
+- [Java](/solution/java/week01-code-analysis/exercise/)
+- C# : ...
+- ...
+
+Here is the step by step:
 [![Proposed Solution Guide](../../img/proposed-solution.png)](solution/step-by-step.md)
