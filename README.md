@@ -20,7 +20,7 @@ We understand you could be busy in the summer and want to just do the practice s
 
 ## Summary
 - [Week 1: Code Analysis.](01-code-analysis/week01.md)
-- [Week 2: Fight indentation.](docs/exercise/week02)
+- [Week 2: Fight indentation.](02-object-calisthenics/week02.md)
 - [Week 3: Fix the code.](docs/exercise/week03)
 - [Week 4: A TDD adventure.](docs/exercise/week04)
 - [Week 5: Love your code without conditions.](docs/exercise/week05)
