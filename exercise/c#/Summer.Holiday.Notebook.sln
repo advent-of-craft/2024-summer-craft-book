@@ -36,6 +36,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week07.Tests", "week07\Week
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week 7 - Design one test that has the impact of thousands", "Week 7 - Design one test that has the impact of thousands", "{3DF62C71-C244-4E50-90F6-646389E65F49}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week 1 - Code Analysis", "Week 1 - Code Analysis", "{6C263A90-FE43-4048-9298-B94D5A4C41F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseMovieStore", "week01-code-analysis\ExerciseMovieStore\ExerciseMovieStore.csproj", "{D6E14001-ECDB-4155-B5FE-3CB4A59A678C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseMovieStore.Tests", "week01-code-analysis\ExerciseMovieStore.Tests\ExerciseMovieStore.Tests.csproj", "{B6644D3A-E2DF-4AF2-A3FF-EFF7CA383164}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +96,14 @@ Global
 		{D7B05F1D-E3B2-455C-8342-5775A0CF8D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7B05F1D-E3B2-455C-8342-5775A0CF8D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7B05F1D-E3B2-455C-8342-5775A0CF8D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E14001-ECDB-4155-B5FE-3CB4A59A678C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E14001-ECDB-4155-B5FE-3CB4A59A678C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E14001-ECDB-4155-B5FE-3CB4A59A678C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E14001-ECDB-4155-B5FE-3CB4A59A678C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6644D3A-E2DF-4AF2-A3FF-EFF7CA383164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6644D3A-E2DF-4AF2-A3FF-EFF7CA383164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6644D3A-E2DF-4AF2-A3FF-EFF7CA383164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6644D3A-E2DF-4AF2-A3FF-EFF7CA383164}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C5E03C4D-4105-473D-B8AB-6D849D6D0478} = {799BC5BF-6F84-4F30-A714-890251A76566}
@@ -104,5 +118,7 @@ Global
 		{E3FE2829-62C7-4FF7-BC8F-07702C5C491E} = {3139D6F3-5083-4154-A971-26C65DC37896}
 		{89A4C62C-1712-4DDC-B7A5-619AB3014A1E} = {3DF62C71-C244-4E50-90F6-646389E65F49}
 		{D7B05F1D-E3B2-455C-8342-5775A0CF8D32} = {3DF62C71-C244-4E50-90F6-646389E65F49}
+		{D6E14001-ECDB-4155-B5FE-3CB4A59A678C} = {6C263A90-FE43-4048-9298-B94D5A4C41F3}
+		{B6644D3A-E2DF-4AF2-A3FF-EFF7CA383164} = {6C263A90-FE43-4048-9298-B94D5A4C41F3}
 	EndGlobalSection
 EndGlobal
