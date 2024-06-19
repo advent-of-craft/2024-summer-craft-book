@@ -19,7 +19,7 @@ As with the Advent of Craft edition, the PDF of the Summer Craft Book comes with
 We understand you could be busy in the summer and want to just do the practice so don't hesitate to do just that !
 
 ## Summary
-- [Week 1: Code Analysis.](01-code-analysis/)
+- [Week 1: Code Analysis.](01-code-analysis/week01.md)
 - [Week 2: Fight indentation.](docs/exercise/week02)
 - [Week 3: Fix the code.](docs/exercise/week03)
 - [Week 4: A TDD adventure.](docs/exercise/week04)
