@@ -61,3 +61,10 @@ built/*
 
 ### Scala
 .bsp/
+/.vs
+*.cache
+/exercise/c#/.vs
+*.ncrunchproject
+*.ncrunchsolution
+/solution/c#/.vs/Summer.Holiday.Notebook/FileContentIndex
+/solution/c#/.vs/Summer.Holiday.Notebook/v17
