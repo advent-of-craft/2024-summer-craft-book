@@ -1,6 +1,5 @@
-namespace ExerciseFizzBuzz
+namespace ExerciseFizzBuzz;
+
+public sealed class OutOfRangeException : ArgumentException
 {
-    public sealed class OutOfRangeException : ArgumentException
-    {
-    }
 }
