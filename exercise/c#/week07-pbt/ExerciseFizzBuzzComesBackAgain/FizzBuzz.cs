@@ -1,6 +1,6 @@
 ﻿using LanguageExt;
 
-namespace Week07
+namespace ExerciseFizzBuzzComesBackAgain
 {
     public static class FizzBuzz
     {

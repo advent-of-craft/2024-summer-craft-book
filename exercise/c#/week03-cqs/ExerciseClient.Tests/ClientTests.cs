@@ -1,8 +1,8 @@
+using ExerciseClient.Accountability;
 using FluentAssertions;
-using Week03.Accountability;
 using Xunit;
 
-namespace Week03.Tests
+namespace ExerciseClient.Tests
 {
     public class ClientTests
     {

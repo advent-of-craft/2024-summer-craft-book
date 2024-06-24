@@ -1,4 +1,4 @@
-﻿namespace Week05
+﻿namespace ExerciseFizzBuzzComesBack
 {
     public static class FizzBuzz
     {

@@ -1,4 +1,4 @@
-namespace Week06
+namespace ExerciseDocuments
 {
     public record Template(
         DocumentTemplate DocumentTemplate,

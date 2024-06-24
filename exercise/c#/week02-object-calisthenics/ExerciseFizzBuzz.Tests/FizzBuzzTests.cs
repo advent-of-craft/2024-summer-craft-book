@@ -1,3 +1,4 @@
+using ExerciseFizzBuzz;
 using FluentAssertions;
 using Xunit;
 

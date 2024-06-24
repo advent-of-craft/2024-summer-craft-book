@@ -7,7 +7,6 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>Week02.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

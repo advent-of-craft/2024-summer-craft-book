@@ -1,4 +1,4 @@
-namespace Week02
+namespace ExerciseFizzBuzz
 {
     public sealed class OutOfRangeException : ArgumentException
     {
