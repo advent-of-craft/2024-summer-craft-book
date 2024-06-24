@@ -8,6 +8,7 @@
     <artifactId>summer-holiday-notebook</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
 		<module>week01-code-analysis/exercise</module>
 		<module>week02-object-calisthenics/exercise1</module>
