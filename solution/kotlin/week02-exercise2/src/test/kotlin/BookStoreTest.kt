@@ -29,25 +29,25 @@ class BookStoreTest : StringSpec({
 
     "doesNotAddBookToStoreIfNoCopy" {
         val noCopy = 0
-        val bookToAdd = createARandomBook(noCopy)!!
-
-        bookToAdd.let {
-            store!!.addBook(it.title, it.author, noCopy)
-            store!!.verifyBookIsInStore(it).shouldBeFalse()
-        }
+        createARandomBook(noCopy)!!
+            .let {
+                store!!.addBook(it.title, it.author, noCopy)
+                store!!.verifyBookIsInStore(it).shouldBeFalse()
+            }
     }
 
     "doesNotAddBookToStoreIfInvalidTitle" {
         val invalidTitle: String? = null
         val author = "JR Tolkien"
-        store!!.addBook(invalidTitle, author, 2)
 
+        store!!.addBook(invalidTitle, author, 2)
         store!!.bookInInventory(invalidTitle, author).shouldBeFalse()
     }
 
     "doesNotAddBookToStoreIfInvalidAuthor" {
         val title = "Lord of the ring"
         val invalidAuthor: String? = null
+
         store!!.addBook(title, invalidAuthor, 2)
         store!!.bookInInventory(title, invalidAuthor).shouldBeFalse()
     }
@@ -57,6 +57,7 @@ class BookStoreTest : StringSpec({
         val additionalCopies = 3
         val bookAdded = addARandomBookToStore(initialCopies)
         val expectedNumberOfCopy = additionalCopies + (bookAdded?.copies() ?: 0)
+
         bookAdded?.let {
             store!!.addBook(it.title, it.author, additionalCopies)
             store!!.verifyNumberOfCopyForBook(it, expectedNumberOfCopy).shouldBeTrue()
@@ -68,6 +69,7 @@ class BookStoreTest : StringSpec({
         val initialCopies = 2
         val bookToSell = addARandomBookToStore(initialCopies)
         val expectedNumberOfCopy = (bookToSell?.copies() ?: 0) - copiesSold
+
         bookToSell?.let {
             store!!.sellBook(it.title, it.author, copiesSold)
             store!!.verifyNumberOfCopyForBook(it, expectedNumberOfCopy).shouldBeTrue()
@@ -79,6 +81,7 @@ class BookStoreTest : StringSpec({
         val initialCopies = 2
         val bookToSell = addARandomBookToStore(initialCopies)
         val expectedNumberOfCopy = bookToSell?.copies() ?: 0
+
         bookToSell?.let {
             store!!.sellBook(it.title, it.author, copiesSold)
             store!!.verifyNumberOfCopyForBook(it, expectedNumberOfCopy).shouldBeTrue()
@@ -88,6 +91,7 @@ class BookStoreTest : StringSpec({
     "sellTheLastCopyOfABookFromTheStore" {
         val copiesSold = 1
         val bookToSell = addARandomBookToStore(copiesSold)
+        
         bookToSell?.let {
             store!!.sellBook(it.title, it.author, copiesSold)
             store!!.verifyBookIsInStore(it).shouldBeFalse()

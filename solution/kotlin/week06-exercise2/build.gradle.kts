@@ -11,7 +11,11 @@ repositories {
 
 dependencies {
     val kotestVersion = "5.8.0"
+    implementation("io.arrow-kt:arrow-core:1.2.0")
+
+    testImplementation("com.approvaltests:approvaltests:22.3.3")
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+    testImplementation("io.kotest.extensions:kotest-assertions-arrow:1.4.0")
     testImplementation(kotlin("test"))
 }
 

@@ -19,9 +19,9 @@
 		<module>week05-complexity/exercise2</module>
 		<module>week06-legacy-code/exercise1</module>
 		<module>week06-legacy-code/exercise2</module>
-		<module>week06-legacy-code/game</module>
-		<module>week07-pbt/exercise</module>
-		<module>week07-pbt/game</module>
+		<module>week06-legacy-code/exercise3</module>
+		<module>week07-pbt/exercise1</module>
+		<module>week07-pbt/exercise2</module>
     </modules>
 
     <properties>
