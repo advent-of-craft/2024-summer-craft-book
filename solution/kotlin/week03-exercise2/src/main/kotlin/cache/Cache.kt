@@ -1,12 +1,16 @@
 package cache
 
 class Cache {
-    private var map: MutableMap<String, Int> = HashMap()
+    private val map: MutableMap<String, Int> = mutableMapOf()
 
-    fun getOrInsert(key: String, value: Int): Int {
-        if (!map.containsKey(key)) {
-            map[key] = value
-        }
-        return map[key]!!
+    fun get(key: String): Int? = map[key] // Just returns the value or null if not present
+
+    fun insertIfAbsent(key: String, value: Int) {
+        map.putIfAbsent(key, value) // Only modifies the state, does not return value
+    }
+
+    fun ensurePresentAndGet(key: String, defaultValue: Int): Int {
+        insertIfAbsent(key, defaultValue)
+        return get(key) ?: defaultValue
     }
 }
