@@ -2,9 +2,9 @@ import {fizzbuzz} from '../src/fizzbuzz';
 
 describe('FizzBuzz should return', () => {
     test.each([
-        [1, 1],
-        [67, 67],
-        [82, 82],
+        [1, "1"],
+        [67, "67"],
+        [82, "82"],
         [3, "Fizz"],
         [66, "Fizz"],
         [99, "Fizz"],

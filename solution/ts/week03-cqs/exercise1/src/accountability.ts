@@ -1,22 +1,17 @@
 export class Client {
-    private totalAmount: number = 0;
-
-    constructor(private readonly orderLines: Readonly<Record<string, number>>) {
+    constructor(private readonly orderLines: Record<string, number>) {
     }
 
-    toStatement(): string {
-        const lines = Object.entries(this.orderLines).map(([name, value]) =>
-            this.formatLine(name, value)
-        );
-        return `${lines.join('\n')}\nTotal : ${this.totalAmount.toFixed(2)}€`;
-    }
+    statement = (): string => `${Object.entries(this.orderLines)
+        .map(
+            ([key, value]) => this.formatLine(key, value)
+        ).join('\n')}\n${this.formatTotal()}`;
 
-    getTotalAmount(): number {
-        return this.totalAmount;
-    }
+    totalAmount = (): number => Object
+        .values(this.orderLines)
+        .reduce((sum, value) => sum + value, 0);
 
-    private formatLine(name: string, value: number): string {
-        this.totalAmount += value;
-        return `${name} for ${value.toFixed(2)}€`;
-    }
+    private formatLine = (name: string, value: number): string => `${name} for ${this.formatAmount(value)}`;
+    private formatTotal = (): string => `Total : ${this.formatAmount(this.totalAmount())}`;
+    private formatAmount = (amount: number): string => `${amount.toFixed(2)}€`;
 }

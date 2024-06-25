@@ -1,7 +1,7 @@
 import {none, Option, some} from "fp-ts/Option";
 
-const min = 1;
-const max = 100;
+export const min = 1;
+export const max = 100;
 
 let mapping: Map<number, string> = new Map([
     [15, 'FizzBuzz'],

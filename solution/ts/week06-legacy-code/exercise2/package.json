@@ -2,7 +2,8 @@
   "name": "reportgenerator",
   "version": "1.0.0",
   "dependencies": {
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "fp-ts": "^2.16.6"
   },
   "devDependencies": {
     "jest": "^29.7.0",

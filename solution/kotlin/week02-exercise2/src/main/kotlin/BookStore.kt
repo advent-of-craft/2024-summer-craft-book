@@ -4,13 +4,14 @@ open class BookStore {
     fun addBook(title: String?, author: String?, copies: Int) {
         if (copies <= 0) return
 
-        getBookBy(title, author)?.let {
-            it.addCopies(copies)
-        } ?: run {
-            Book.tryCreateBook(title, author, copies)?.let {
-                inventory.add(it)
+        getBookBy(title, author)
+            ?.addCopies(copies)
+            ?: run {
+                Book.tryCreateBook(title, author, copies)
+                    ?.let {
+                        inventory.add(it)
+                    }
             }
-        }
     }
 
     fun sellBook(title: String, author: String, copies: Int) {

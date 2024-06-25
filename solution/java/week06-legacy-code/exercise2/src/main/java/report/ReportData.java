@@ -1,9 +1,9 @@
 package report;
 
 public class ReportData {
-    private int id;
-    private double value;
-    private String description;
+    private final int id;
+    private final double value;
+    private final String description;
 
     public ReportData(int id, double value, String description) {
         this.id = id;
