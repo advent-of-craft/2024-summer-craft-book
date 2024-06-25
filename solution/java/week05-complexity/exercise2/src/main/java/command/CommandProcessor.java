@@ -4,29 +4,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandProcessor {
-    private Map<String, Command> commandMap;
+    private static Map<String, Command> commands;
 
     public CommandProcessor() {
-        commandMap = new HashMap<>();
-        commandMap.put("greet", () -> System.out.println("Hello, World!"));
-        commandMap.put("exit", () -> System.out.println("Exiting application..."));
+        commands = new HashMap<>();
     }
 
-    public void processCommand(String command) {
-        if (commandMap.containsKey(command)) {
-            commandMap.get(command).execute();
-        } else {
-            System.out.println("Unknown command");
-        }
+    public void addCommand(String commandName, Command command) {
+        commands.put(commandName, command);
+    }
+
+    public void processCommand(String commandName) {
+        Command cmd = commands.getOrDefault(commandName, () -> System.out.println("Command not recognized."));
+        cmd.execute();
     }
 
     public static void main(String[] args) {
-        CommandProcessor cp = new CommandProcessor();
+        CommandProcessor processor = new CommandProcessor();
+        // Create and register commands
+        processor.addCommand("greet", new GreetCommand("Alice", "Johnson"));
+        processor.addCommand("exit", new ExitCommand());
+        processor.addCommand("help", new HelpCommand(commands));
 
-        // TODO: Should be able to pass my name to the command to say Hello to me!
-        cp.processCommand("greet");  // Outputs: Hello, World!
-        cp.processCommand("exit");   // Outputs: Exiting application...
-        // TODO: Should display all commands available
-        cp.processCommand("help");    // Outputs: Unknown command
+        processor.processCommand("greet");  // Outputs: Hello, Alice Johnson!
+        processor.processCommand("exit");   // Outputs: Goodbye!
+        processor.processCommand("help");   // Outputs: Should be all commands' description
+        processor.processCommand("invalid");   // Outputs: Command not recognized.
     }
 }
+
