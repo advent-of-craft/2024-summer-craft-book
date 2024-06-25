@@ -1,5 +1,10 @@
 # Summer Craft Book 2024
 
+[![Our Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/E5Z9s9UKTS)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/advent-of-craft)
+
+[![License](https://img.shields.io/github/license/advent-of-craft/advent-of-craft.svg)](https://github.com/advent-of-craft/advent-of-craft/blob/main/LICENSE)
+
 This year, we are launching our version of the summer holiday workbook around the craft called the **Summer Craft Book**.
 
 Please, download the PDF of the Summer Craft Book in this repository to get the most out of it.
