@@ -1,11 +1,9 @@
-package order;
+import {Order} from "./order";
 
-import java.util.List;
-
-public class OrderProcessor {
-    public void processOrders(List<Order> orders) {
-        for (Order item : orders) {
-            if (item.getStatus() == Order.UNPROCESSED) {
+export class OrderProcessor {
+    processOrders(orders: Order[]): void {
+        for (const item of orders) {
+            if (item.getStatus() === Order.UNPROCESSED) {
                 if (item.getItems() > 5) {
                     // apply bulk discount
                     item.setTotal(item.getTotal() * 0.9);
