@@ -19,6 +19,7 @@ class MovieStoreTest {
         store.addMovie("003", "Dunkirk", "Christopher Nolan", 5, 0d);
     }
 
+    //Poor naming testxxx
     @Test
     void testAddMovie() {
         store.addMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8, 0d);

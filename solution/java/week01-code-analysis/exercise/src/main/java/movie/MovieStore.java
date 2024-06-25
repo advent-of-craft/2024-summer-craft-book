@@ -53,7 +53,6 @@ public class MovieStore {
     }
 
     public void updateMovieCopies(String id, int newTotalCopies) {
-        // Performance: possibly multiple iterations
         if (allMovies.containsKey(id)) {
             Movie movie = allMovies.get(id);
             if (newTotalCopies < movie.borrowedCopies) {
