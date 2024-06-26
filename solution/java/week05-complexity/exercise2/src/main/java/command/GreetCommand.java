@@ -10,7 +10,7 @@ class GreetCommand implements Command {
     }
 
     @Override
-    public void execute() {
-        System.out.println("Hello, " + firstName + " " + lastName + "!");
+    public String executeAndDisplayResult() {
+        return "Hello, " + firstName + " " + lastName + "!";
     }
 }
