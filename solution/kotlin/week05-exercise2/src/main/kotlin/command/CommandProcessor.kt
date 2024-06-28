@@ -1,28 +1,17 @@
 package command
 
 class CommandProcessor {
-    private var commandMap: MutableMap<String, Command> = HashMap()
+    private val commands: MutableMap<String, Command> = mutableMapOf()
 
-    init {
-        commandMap["greet"] = Command { println("Hello, World!") }
-        commandMap["exit"] = Command { println("Exiting application...") }
+    val commandsNames: Set<String>
+        get() = commands.keys
+
+    fun addCommand(commandName: String, command: Command) {
+        commands[commandName] = command
     }
 
-    fun processCommand(command: String) {
-        if (commandMap.containsKey(command)) {
-            commandMap[command]?.execute()
-        } else {
-            println("Unknown command")
-        }
+    fun processCommand(commandName: String, printTo: (String) -> Unit) {
+        val cmd = commands[commandName] ?: Command { "Command not recognized." }
+        printTo(cmd.executeAndDisplayResult())
     }
-}
-
-fun main() {
-    val cp = CommandProcessor()
-
-    // TODO: Should be able to pass my name to the command to say Hello to me!
-    cp.processCommand("greet")  // Outputs: Hello, World!
-    cp.processCommand("exit")   // Outputs: Exiting application...
-    // TODO: Should display all commands available
-    cp.processCommand("help")   // Outputs: Unknown command
 }

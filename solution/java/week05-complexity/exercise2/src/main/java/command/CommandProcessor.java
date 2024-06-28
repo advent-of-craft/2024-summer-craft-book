@@ -21,7 +21,7 @@ public class CommandProcessor {
     }
 
     public void processCommand(String commandName, Consumer<String> printTo) {
-        Command cmd = commands.getOrDefault(commandName, () -> "Command not recognized.");
+        var cmd = commands.getOrDefault(commandName, () -> "Command not recognized.");
         printTo.accept(cmd.executeAndDisplayResult());
     }
 }

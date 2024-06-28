@@ -61,7 +61,8 @@ class MovieStoreTest {
     @Test
     void testFindMoviesByTitle() {
         List<Movie> movies = store.findMoviesByTitle("Inception");
+
         assertEquals(1, movies.size(), "Should find one movie");
-        assertEquals("Inception", movies.get(0).title, "Movie title should be 'Inception'");
+        assertEquals("Inception", movies.getFirst().title, "Movie title should be 'Inception'");
     }
 }

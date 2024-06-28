@@ -1,26 +1,18 @@
 import {Command} from "./command";
 
 export class CommandProcessor {
-    private commandMap: Map<string, Command>;
+    private commands: Map<string, Command> = new Map<string, Command>();
 
-    constructor() {
-        this.commandMap = new Map<string, Command>();
-        this.commandMap.set("greet", { execute: () => console.log("Hello, World!") });
-        this.commandMap.set("exit", { execute: () => console.log("Exiting application...") });
+    get commandsNames(): Set<string> {
+        return new Set(this.commands.keys());
     }
 
-    processCommand(command: string): void {
-        if (this.commandMap.has(command)) {
-            this.commandMap.get(command)!.execute();
-        } else {
-            console.log("Unknown command");
-        }
+    addCommand(commandName: string, command: Command): void {
+        this.commands.set(commandName, command);
+    }
+
+    processCommand(commandName: string, printTo: (message: string) => void): void {
+        const cmd = this.commands.get(commandName) || { executeAndDisplayResult: () => "Command not recognized." };
+        printTo(cmd.executeAndDisplayResult());
     }
 }
-
-const cp = new CommandProcessor();
-// TODO: Should be able to pass my name to the command to say Hello to me!
-cp.processCommand("greet");  // Outputs: Hello, World!
-cp.processCommand("exit");   // Outputs: Exiting application...
-// TODO: Should display all commands available
-cp.processCommand("help");   // Outputs: Unknown command

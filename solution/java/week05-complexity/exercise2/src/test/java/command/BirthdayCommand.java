@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.function.Supplier;
 
 public class BirthdayCommand implements Command {
-    private LocalDate today = LocalDate.of(1900,1,1);
+    private final LocalDate today;
     private final LocalDate birthday;
 
     public BirthdayCommand(Supplier<LocalDate> today, LocalDate birthday) {
