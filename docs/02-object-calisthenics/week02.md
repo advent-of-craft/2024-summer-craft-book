@@ -48,9 +48,6 @@ Choose your stack to do this exercise
 - C# : ...
 - ...
 
-Here is the step by step:
-[![Proposed Solution Guide](../../img/proposed-solution.png)](solution/step-by-step.md)
-
 ### Exercise 2: Identify the steps
 
 Identify the Object Calisthenics steps in the code below? 
@@ -84,6 +81,3 @@ Choose your stack to do this exercise
 - [Java](/solution/java/week02-object-calisthenics/exercise2/)
 - C# : ...
 - ...
-
-Here is the step by step:
-[![Proposed Solution Guide](../../img/proposed-solution.png)](solution/step-by-step.md)

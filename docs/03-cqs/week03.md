@@ -1,38 +1,34 @@
-## Week 2: Object Calisthenics.
+## Week 3: Command Query Separation.
 
-> Let's look at the steps needed to read better code
+### Defining the responsibilities
 
-### The concepts
+Whose responsibility is it?
 
-9 Steps to improve code readibility
+In object-oriented programming (OOP), responsibility refers to the specific roles or behaviors assigned to an object. Each object in a system is responsible for managing its data and behaviors, known as methods, which interact with other objects. 
 
-Object Calisthenics are a set of principles intended to help developers write cleaner, more maintainable code. They were introduced by Jeff Bay in his book "The ThoughtWorks Anthology". The rules focus on maintaining simplicity and clarity in code design. They are as stated below:
+These behaviors or methods are identified as either commands or queries.
 
-   1) Only One Level Of Indentation Per Method
-   2) Don’t Use The ELSE Keyword
-   3) Wrap All Primitives And Strings
-   4) First Class Collections
-   5) One Dot Per Line
-   6) Don’t Abbreviate
-   7) Keep All Entities Small
-   8) No Classes With More Than 2 Instance Variables
-   9) No Getters/Setters/Properties
+Commands change the state of the system.
+Queries return information without altering the state. 
 
-As illustrated in this [article](https://williamdurand.fr/2013/06/03/object-calisthenics/)
+This distinction helps in designing predictable and reliable interactions within the system. The encapsulation of responsibility with the clear distinction between commands and queries ensures a modular, maintainable codebase.
 
-### Reflexion
+> **A method is NOT supposed to do both.**
 
-Which one do you agree and disagree and why? 
-Write down your observation about the steps above by your own experience
+### How to assert properly
 
-### Exercise 1: Fight Indentation
+Assertions in unit testing insures the system is properly validated. It's important the assertions reflects the responsibility of the method and validates it accordingly. Look at the following graphic to help you assert correctly your code.
 
-Over indentation is at the core of accidental complexity. 
-The first thing you have to religiously go through is to avoid unnecessary indentation level.
+![CQS Assertions](img/assert.png)
 
->**List down the steps to simplify this code?**
 
-Write down everything you can do to make this code clearer below.
+### Exercise 1: Identify the issue and its consequences
+
+Please read the code well and try to understand the issue and the underlying bad consequences such a code can have.
+
+>**Analyse the main issue and what changes you would make below.**
+
+Correct the code to respect the CQS principle.
 
 #### Supported languages
 
@@ -48,42 +44,25 @@ Choose your stack to do this exercise
 - C# : ...
 - ...
 
-Here is the step by step:
-[![Proposed Solution Guide](../../img/proposed-solution.png)](solution/step-by-step.md)
 
-### Exercise 2: Identify the steps
+### Exercise 2: Double-edge method
 
-Identify the Object Calisthenics steps in the code below? 
+Some methods can be both query & command and are especially hard to separate. Analyse the code below and see how you can refactor it to show the real intention. 
 
-A little reminder:
-   1) Only One Level Of Indentation
-   2) Don’t Use The ELSE Keyword
-   3) Wrap All Primitives And Strings
-   4) First Class Collections
-   5) One Dot Per Line
-   6) Don’t Abbreviate
-   7) Keep All Entities Small
-   8) No More Than 2 Invariants per class
-   9) No Getters/Setters/Properties
-
-
->**Write a TODO to where it is in the code that does not respect a step, mark which step it is and the action you would do.**
-
-Feel free to correct the code as you see fit.
+>**Try to write your unit tests and see the changes you want to emerge from them.**
 
 #### Supported languages
 
 Choose your stack to do this exercise
 
-- [Java](/exercise/java/week02-object-calisthenics/exercise2/)
+- [Java](/exercise/java/week03-cqs/exercise2/)
 - C# : ...
 - ...
 
 #### Proposed Solution
 
-- [Java](/solution/java/week02-object-calisthenics/exercise2/)
+- [Java](/solution/java/week03-cqs/exercise2/)
 - C# : ...
 - ...
 
-Here is the step by step:
-[![Proposed Solution Guide](../../img/proposed-solution.png)](solution/step-by-step.md)
+
