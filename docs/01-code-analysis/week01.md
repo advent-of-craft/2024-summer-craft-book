@@ -32,14 +32,16 @@ Note: For this exercise, we recommend using the summer book but if you are using
 Choose your stack to do this exercise
 
 - [Java](/exercise/java/week01-code-analysis/exercise/)
-- C# : ...
-- ...
+- [C#](/exercise/c#/week01-code-analysis/)
+- [Kotlin](/exercise/kotlin/week01/)
+- [TypeScript](/exercise/ts/week01-code-analysis/)
 
 #### Proposed Solution
 
 - [Java](/solution/java/week01-code-analysis/exercise/)
-- C# : ...
-- ...
+- [C#](/solution/c#/week01-code-analysis/)
+- [Kotlin](/solution/kotlin/week01/)
+- [TypeScript](/solution/ts/week01-code-analysis/)
 
 ### Exercise 2: Arrange by type.
 
