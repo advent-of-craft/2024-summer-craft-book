@@ -17,13 +17,15 @@ We have also developed bias towards reading codes especially code that is not ou
 
 Reading objectively and not taking immediate actions can be the key to safe refactoring.
 
-### Exercise: First things first
+### Exercise 1: First things first
 
 You are about to look at a pretty complicated and big code base. Be prepared to look at the big picture before nitpicking every single details you come across.
 
 What do you see? 
 
 >**Write down all the things you would change and prefix them with a number.**
+
+Note: For this exercise, we recommend using the summer book but if you are using only the coding version, feel free to have your own notepad or put TODO comments in the code. It's important that you index them for the part 2 and 3.
 
 #### Supported languages
 
@@ -39,12 +41,22 @@ Choose your stack to do this exercise
 - C# : ...
 - ...
 
-Here is the step by step:
-[![Proposed Solution Guide](../../img/proposed-solution.png)](solution/step-by-step.md)
+### Exercise 2: Arrange by type.
 
+Use the numbers on each smell to arrange them in three categories:
+
+CS: Code smells
+I: Improvements
+V: Vulnerabilities
+
+If you are using only the coding version, prefix your TODOs with the code.
+
+### Exercise 3: Use your own category.
+
+You may use another system to prefix the TODOs in your code. Use your own category that seems better for you.
 
 ### Go further
 
-Taking notes as mind-map is a powerful tool to help remember information in a structured way. Here is an example of notes for code analysis
+Taking notes as mind-map is a powerful tool to help remember information in a structured way. Here is an example of notes for code analysis.
 
 Here are some [technics](https://www.goodnotes.com/blog/mind-mapping-methods) you can use with your favorite sharing board application.
