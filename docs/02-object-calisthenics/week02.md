@@ -39,14 +39,16 @@ Write down everything you can do to make this code clearer below.
 Choose your stack to do this exercise
 
 - [Java](/exercise/java/week02-object-calisthenics/exercise1/)
-- C# : ...
-- ...
+- [C#](/exercise/c#/week02-object-calisthenics/)
+- [Kotlin](/exercise/kotlin/week02-exercise1/)
+- [TypeScript](/exercise/ts/week02-object-calisthenics/exercise1/)
 
 #### Proposed Solution
 
 - [Java](/solution/java/week02-object-calisthenics/exercise1/)
-- C# : ...
-- ...
+- [C#](/solution/c#/week02-object-calisthenics/)
+- [Kotlin](/solution/kotlin/week02-exercise1/)
+- [TypeScript](/solution/ts/week02-object-calisthenics/exercise1/)
 
 ### Exercise 2: Identify the steps
 
@@ -73,11 +75,13 @@ Feel free to correct the code as you see fit.
 Choose your stack to do this exercise
 
 - [Java](/exercise/java/week02-object-calisthenics/exercise2/)
-- C# : ...
-- ...
+- [C#](/exercise/c#/week02-object-calisthenics/)
+- [Kotlin](/exercise/kotlin/week02-exercise2/)
+- [TypeScript](/exercise/ts/week02-object-calisthenics/exercise2/)
 
 #### Proposed Solution
 
 - [Java](/solution/java/week02-object-calisthenics/exercise2/)
-- C# : ...
-- ...
+- [C#](/solution/c#/week02-object-calisthenics/)
+- [Kotlin](/solution/kotlin/week02-exercise2/)
+- [TypeScript](/solution/ts/week02-object-calisthenics/exercise2/)
