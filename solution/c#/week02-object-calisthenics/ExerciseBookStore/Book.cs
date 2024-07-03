@@ -1,4 +1,4 @@
-﻿namespace ExerciseBookStore;
+﻿namespace Exercise2BookStore;
 
 public class Book(string title, string author, int copies)
 {

@@ -1,8 +1,7 @@
-using ExerciseFizzBuzz;
 using FluentAssertions;
 using Xunit;
 
-namespace Week02.Tests;
+namespace Exercise1FizzBuzz.Tests;
 
 public class FizzBuzzTests
 {
