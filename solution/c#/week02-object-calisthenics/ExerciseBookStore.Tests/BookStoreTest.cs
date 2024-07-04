@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace ExerciseBookStore.Test;
+namespace Exercise2BookStore.Tests;
 
 public class BookStoreTest
 {
@@ -114,7 +114,7 @@ public class BookStoreTest
         return createdBook;
     }
 
-    private class BookStoreUnderTest : ExerciseBookStore.BookStore
+    private class BookStoreUnderTest : BookStore
     {
         public bool BookInInventory(string title, string author)
         {

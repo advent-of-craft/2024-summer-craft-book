@@ -1,4 +1,4 @@
-﻿namespace ExerciseFizzBuzz;
+﻿namespace Exercise1FizzBuzz;
 
 public static class FizzBuzz
 {

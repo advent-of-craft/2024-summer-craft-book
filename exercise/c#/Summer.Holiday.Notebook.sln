@@ -18,41 +18,41 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseMovieStore", "week0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseMovieStore.Tests", "week01-code-analysis\ExerciseMovieStore.Tests\ExerciseMovieStore.Tests.csproj", "{B6644D3A-E2DF-4AF2-A3FF-EFF7CA383164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseFizzBuzz", "week02-object-calisthenics\ExerciseFizzBuzz\ExerciseFizzBuzz.csproj", "{5BA9F925-77D4-426B-A3DC-50EA80304B7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1FizzBuzz", "week02-object-calisthenics\Exercise1FizzBuzz\Exercise1FizzBuzz.csproj", "{5BA9F925-77D4-426B-A3DC-50EA80304B7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseFizzBuzz.Tests", "week02-object-calisthenics\ExerciseFizzBuzz.Tests\ExerciseFizzBuzz.Tests.csproj", "{1E859AD7-C955-491F-9E94-D8A52E04AD83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1FizzBuzz.Tests", "week02-object-calisthenics\Exercise1FizzBuzz.Tests\Exercise1FizzBuzz.Tests.csproj", "{1E859AD7-C955-491F-9E94-D8A52E04AD83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseBookStore", "week02-object-calisthenics\ExerciseBookStore\ExerciseBookStore.csproj", "{74E5DA7B-2D23-4426-84ED-7B5D2300ACA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2BookStore", "week02-object-calisthenics\Exercise2BookStore\Exercise2BookStore.csproj", "{74E5DA7B-2D23-4426-84ED-7B5D2300ACA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseBookStore.Tests", "week02-object-calisthenics\ExerciseBookStore.Tests\ExerciseBookStore.Tests.csproj", "{E7E239CC-9A7E-4679-8F92-986A7E33C33B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2BookStore.Tests", "week02-object-calisthenics\Exercise2BookStore.Tests\Exercise2BookStore.Tests.csproj", "{E7E239CC-9A7E-4679-8F92-986A7E33C33B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseClient", "week03-cqs\ExerciseClient\ExerciseClient.csproj", "{2F54CC80-9A91-4117-9B85-0A14A58B2301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1Client", "week03-cqs\Exercise1Client\Exercise1Client.csproj", "{2F54CC80-9A91-4117-9B85-0A14A58B2301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseClient.Tests", "week03-cqs\ExerciseClient.Tests\ExerciseClient.Tests.csproj", "{B2487FC9-55E2-431D-89A8-15560153435E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1Client.Tests", "week03-cqs\Exercise1Client.Tests\Exercise1Client.Tests.csproj", "{B2487FC9-55E2-431D-89A8-15560153435E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseCache", "week03-cqs\ExerciseCache\ExerciseCache.csproj", "{24746743-C6D3-466D-84EB-9641A8554213}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2Cache", "week03-cqs\Exercise2Cache\Exercise2Cache.csproj", "{24746743-C6D3-466D-84EB-9641A8554213}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseCache.Tests", "week03-cqs\ExerciseCache.Tests\ExerciseCache.Tests.csproj", "{DBFA76DB-411F-4445-B4E0-EB6C26919D8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2Cache.Tests", "week03-cqs\Exercise2Cache.Tests\Exercise2Cache.Tests.csproj", "{DBFA76DB-411F-4445-B4E0-EB6C26919D8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercisePasswordValidation", "week04-tdd\ExercisePasswordValidation\ExercisePasswordValidation.csproj", "{0BEC2B2E-13E3-4169-B2A0-BB9F3D5BABAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercisePasswordValidation.Tests", "week04-tdd\ExercisePasswordValidation.Tests\ExercisePasswordValidation.Tests.csproj", "{8704FFD5-EF33-4695-9A1C-CA6A6D1ED2B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseFizzBuzzComesBack", "week05-complexity\ExerciseFizzBuzzComesBack\ExerciseFizzBuzzComesBack.csproj", "{9375922F-D6A3-4ABD-9517-99ECE52CFD23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1FizzBuzzComesBack", "week05-complexity\Exercise1FizzBuzzComesBack\Exercise1FizzBuzzComesBack.csproj", "{9375922F-D6A3-4ABD-9517-99ECE52CFD23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseFizzBuzzComesBack.Tests", "week05-complexity\ExerciseFizzBuzzComesBack.Tests\ExerciseFizzBuzzComesBack.Tests.csproj", "{01D4D7F9-7DC1-42E7-A0DE-AFAFEF0458C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1FizzBuzzComesBack.Tests", "week05-complexity\Exercise1FizzBuzzComesBack.Tests\Exercise1FizzBuzzComesBack.Tests.csproj", "{01D4D7F9-7DC1-42E7-A0DE-AFAFEF0458C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseCommandProcessor", "week05-complexity\ExerciseCommandProcessor\ExerciseCommandProcessor.csproj", "{01891F86-6212-4595-A8FF-877C9E7C167C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2CommandProcessor", "week05-complexity\Exercise2CommandProcessor\Exercise2CommandProcessor.csproj", "{01891F86-6212-4595-A8FF-877C9E7C167C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseCommandProcessor.Tests", "week05-complexity\ExerciseCommandProcessor.Tests\ExerciseCommandProcessor.Tests.csproj", "{725AEF62-14C5-4D90-8169-F5E4054797E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2CommandProcessor.Tests", "week05-complexity\Exercise2CommandProcessor.Tests\Exercise2CommandProcessor.Tests.csproj", "{725AEF62-14C5-4D90-8169-F5E4054797E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseDocuments", "week06-legacy-code\ExerciseDocuments\ExerciseDocuments.csproj", "{69115D5C-A0E5-486D-BFEC-88A16F2A675D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1Documents", "week06-legacy-code\Exercise1Documents\Exercise1Documents.csproj", "{69115D5C-A0E5-486D-BFEC-88A16F2A675D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseDocuments.Tests", "week06-legacy-code\ExerciseDocuments.Tests\ExerciseDocuments.Tests.csproj", "{26649BA8-3BE5-413F-B795-2E6A2D149117}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1Documents.Tests", "week06-legacy-code\Exercise1Documents.Tests\Exercise1Documents.Tests.csproj", "{26649BA8-3BE5-413F-B795-2E6A2D149117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseReportGenerator", "week06-legacy-code\ExerciseReportGenerator\ExerciseReportGenerator.csproj", "{93B4EE84-BCEC-4D84-A652-C677B29E19EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2ReportGenerator", "week06-legacy-code\Exercise2ReportGenerator\Exercise2ReportGenerator.csproj", "{93B4EE84-BCEC-4D84-A652-C677B29E19EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseReportGenerator.Tests", "week06-legacy-code\ExerciseReportGenerator.Tests\ExerciseReportGenerator.Tests.csproj", "{A5F5B815-4C44-4B3E-9B5E-F422D8486FFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2ReportGenerator.Tests", "week06-legacy-code\Exercise2ReportGenerator.Tests\Exercise2ReportGenerator.Tests.csproj", "{A5F5B815-4C44-4B3E-9B5E-F422D8486FFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOrderProcessor", "week06-legacy-code\GameOrderProcessor\GameOrderProcessor.csproj", "{C0B2F5E5-328A-432E-942E-3EBF46B3611D}"
 EndProject

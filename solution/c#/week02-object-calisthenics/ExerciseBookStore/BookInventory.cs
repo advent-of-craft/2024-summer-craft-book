@@ -1,4 +1,4 @@
-﻿namespace ExerciseBookStore;
+﻿namespace Exercise2BookStore;
 
 public class BookInventory : List<Book>
 {

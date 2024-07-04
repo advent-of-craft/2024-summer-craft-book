@@ -7,7 +7,8 @@ public class BookStore {
         if (title != null && author != null && copies > 0) {
             Book foundBook = null;
             for (Book book : inv) {
-                if (book.getTitle().equals(title) && book.getAuthor().equals(author)) {
+                if (book.getTitle().equals(title)
+                        && book.getAuthor().equals(author)) {
                     foundBook = book;
                     break;
                 }
@@ -22,7 +23,8 @@ public class BookStore {
 
     public void sellBook(String title, String author, int copies) {
         for (Book book : inv) {
-            if (book.getTitle().equals(title) && book.getAuthor().equals(author)) {
+            if (book.getTitle().equals(title)
+                    && book.getAuthor().equals(author)) {
                 book.removeCopies(copies);
                 if (book.getCopies() <= 0) {
                     inv.remove(book);

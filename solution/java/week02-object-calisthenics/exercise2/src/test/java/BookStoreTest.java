@@ -1,20 +1,34 @@
 import org.junit.Test;
+import store.Book;
+import store.BookStore;
 
-import java.util.Optional;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class BookStoreTest {
 
-    private final BookStoreUnderTest store = new BookStoreUnderTest();
+    private final BookStoreForTest store = new BookStoreForTest();
+
+    private static Book createABook(int copies) {
+        return Book.tryCreateBook(
+                "Lord of the ring",
+                "JR Tolkien", copies
+        ).orElseThrow();
+    }
+
+    private Book addBookToStore(int initialCopies) {
+        var createdBook = createABook(initialCopies);
+        store.addBook(createdBook.getTitle(), createdBook.getAuthor(), initialCopies);
+        return createdBook;
+    }
 
     @Test
     public void addANewBookToStore() {
-        var bookToAdd = createARandomBook(2);
+        var bookToAdd = createABook(2);
 
-        store.addBook(bookToAdd.get().getTitle(),
-                bookToAdd.get().getAuthor(),
-                bookToAdd.get().getCopies());
+        store.addBook(bookToAdd.getTitle(),
+                bookToAdd.getAuthor(),
+                bookToAdd.getCopies());
 
         assertTrue("The book should be in the inventory",
                 store.verifyBookIsInStore(bookToAdd));
@@ -23,11 +37,12 @@ public class BookStoreTest {
     @Test
     public void doesNotAddBookToStoreIfNoCopy() {
         var noCopy = 0;
-        var bookToAdd = createARandomBook(noCopy);
+        var bookToAdd = createABook(noCopy);
 
-        store.addBook(bookToAdd.get().getTitle(),
-                bookToAdd.get().getAuthor(),
-                noCopy);
+        store.addBook(bookToAdd.getTitle(),
+                bookToAdd.getAuthor(),
+                noCopy
+        );
 
         assertFalse("The book should not be in the inventory",
                 store.verifyBookIsInStore(bookToAdd));
@@ -38,7 +53,7 @@ public class BookStoreTest {
         String invalidTitle = null;
         String author = "JR Tolkien";
 
-        store.addBook(invalidTitle, author,2);
+        store.addBook(invalidTitle, author, 2);
 
         assertFalse("The book should not be in the inventory",
                 store.bookInInventory(invalidTitle, author));
@@ -49,85 +64,81 @@ public class BookStoreTest {
         String title = "Lord of the ring";
         String invalidAuthor = null;
 
-        store.addBook(title, invalidAuthor,2);
+        store.addBook(title, invalidAuthor, 2);
 
-        assertFalse("The book should not be in the inventory",
-                store.bookInInventory(title, invalidAuthor));
+        assertFalse(
+                "The book should not be in the inventory",
+                store.bookInInventory(title, invalidAuthor)
+        );
     }
 
     @Test
     public void addAnExistingBookToStoreIncreasesTheCopies() {
         var initialCopies = 2;
         var additionalCopies = 3;
-        var bookAdded = addARandomBookToStore(initialCopies);
-        int expectedNumberOfCopy = additionalCopies + bookAdded.get().getCopies();
+        var bookAdded = addBookToStore(initialCopies);
+        int expectedNumberOfCopy = additionalCopies + bookAdded.getCopies();
 
-        store.addBook(bookAdded.get().getTitle(),
-                bookAdded.get().getAuthor(),
+        store.addBook(bookAdded.getTitle(),
+                bookAdded.getAuthor(),
                 additionalCopies);
 
-        assertTrue("The book should have the following number of copies " + expectedNumberOfCopy,
-                store.verifyNumberOfCopyForBook(bookAdded, expectedNumberOfCopy));
+        assertTrue(
+                "The book should have the following number of copies " + expectedNumberOfCopy,
+                store.verifyNumberOfCopyForBook(bookAdded, expectedNumberOfCopy)
+        );
     }
 
     @Test
     public void sellABookFromTheStore() {
         var copiesSold = 1;
         var initialCopies = 2;
-        var bookToSell = addARandomBookToStore(initialCopies);
-        int expectedNumberOfCopy = bookToSell.get().getCopies() - copiesSold;
+        var bookToSell = addBookToStore(initialCopies);
+        int expectedNumberOfCopy = bookToSell.getCopies() - copiesSold;
 
-        store.sellBook(bookToSell.get().getTitle(),
-                bookToSell.get().getAuthor(),
+        store.sellBook(bookToSell.getTitle(),
+                bookToSell.getAuthor(),
                 copiesSold);
 
-        assertTrue("The book should have the following number of copies " + expectedNumberOfCopy,
-                store.verifyNumberOfCopyForBook(bookToSell, expectedNumberOfCopy));
+        assertTrue(
+                "The book should have the following number of copies " + expectedNumberOfCopy,
+                store.verifyNumberOfCopyForBook(bookToSell, expectedNumberOfCopy)
+        );
     }
 
     @Test
     public void cannotSellZeroCopyOfABook() {
         var copiesSold = 0;
         var initialCopies = 2;
-        var bookToSell = addARandomBookToStore(initialCopies);
-        int expectedNumberOfCopy = bookToSell.get().getCopies();
+        var bookToSell = addBookToStore(initialCopies);
+        int expectedNumberOfCopy = bookToSell.getCopies();
 
-        store.sellBook(bookToSell.get().getTitle(),
-                bookToSell.get().getAuthor(),
+        store.sellBook(bookToSell.getTitle(),
+                bookToSell.getAuthor(),
                 copiesSold);
 
-        assertTrue("The book should have the following number of copies " + expectedNumberOfCopy,
-                store.verifyNumberOfCopyForBook(bookToSell, expectedNumberOfCopy));
+        assertTrue(
+                "The book should have the following number of copies " + expectedNumberOfCopy,
+                store.verifyNumberOfCopyForBook(bookToSell, expectedNumberOfCopy)
+        );
     }
 
     @Test
     public void sellTheLastCopyOfABookFromTheStore() {
         var copiesSold = 1;
-        var bookToSell = addARandomBookToStore(copiesSold);
+        var bookToSell = addBookToStore(copiesSold);
 
-        store.sellBook(bookToSell.get().getTitle(),
-                bookToSell.get().getAuthor(),
+        store.sellBook(bookToSell.getTitle(),
+                bookToSell.getAuthor(),
                 copiesSold);
 
-        assertFalse("The book should no longer be in the inventory",
-                store.verifyBookIsInStore(bookToSell));
+        assertFalse(
+                "The book should no longer be in the inventory",
+                store.verifyBookIsInStore(bookToSell)
+        );
     }
 
-    private static Optional<Book> createARandomBook(int copies) {
-        return Book
-                .tryCreateBook(
-                        "Lord of the ring",
-                        "JR Tolkien", copies);
-    }
-
-    private Optional<Book> addARandomBookToStore(int initialCopies) {
-        var createdBook = createARandomBook(initialCopies);
-        store.addBook(createdBook.get().getTitle(), createdBook.get().getAuthor(), initialCopies);
-        return createdBook;
-    }
-
-    static class BookStoreUnderTest extends BookStore {
-
+    static class BookStoreForTest extends BookStore {
         public boolean bookInInventory(String title, String author) {
             return getBookBy(title, author).isPresent();
         }
@@ -136,16 +147,15 @@ public class BookStoreTest {
             return getBookBy(bookSearched.getTitle(), bookSearched.getAuthor()).isPresent();
         }
 
-        public boolean verifyBookIsInStore(Optional<Book> book) {
-            return book.isPresent()
-                    && bookInInventory(book.get());
+        public boolean verifyBookIsInStore(Book book) {
+            return bookInInventory(book);
         }
 
-        public boolean verifyNumberOfCopyForBook(Optional<Book> bookAdded, int expectedNumberOfCopy) {
+        public boolean verifyNumberOfCopyForBook(Book bookAdded, int expectedNumberOfCopy) {
             return verifyBookIsInStore(bookAdded)
-                    && getBookBy(bookAdded.get().getTitle(),
-                                 bookAdded.get().getAuthor())
-                            .get().getCopies() == expectedNumberOfCopy;
+                    && getBookBy(bookAdded.getTitle(), bookAdded.getAuthor())
+                    .orElseThrow()
+                    .getCopies() == expectedNumberOfCopy;
 
         }
     }

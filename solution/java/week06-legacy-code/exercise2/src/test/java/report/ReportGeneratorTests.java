@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
-public class ReportGeneratorTests {
+class ReportGeneratorTests {
 
     private static ReportGenerator createReportGenerator() {
         return new ReportGenerator(Map.of(
@@ -27,7 +27,7 @@ public class ReportGeneratorTests {
     }
 
     @Test
-    public void generateReportInCSV() {
+    void generateReportInCSV() {
         createReportGenerator()
                 .generateReport(ReportType.CSV, createReportData())
                 .onSuccess(Approvals::verify)
@@ -35,7 +35,7 @@ public class ReportGeneratorTests {
     }
 
     @Test
-    public void generateReportInPDF() {
+    void generateReportInPDF() {
         createReportGenerator()
                 .generateReport(ReportType.PDF, createReportData())
                 .onSuccess(Approvals::verify)
@@ -43,23 +43,23 @@ public class ReportGeneratorTests {
     }
 
     @Test
-    public void generateReportInPDFShouldFailIfReportDataIsEmpty() {
+    void generateReportInPDFShouldFailIfReportDataIsEmpty() {
         createReportGenerator()
                 .generateReport(ReportType.PDF, null)
                 .onSuccess(Assertions::fail)
                 .onFailure(ex -> {
-                    assertTrue(ex instanceof NoDataToReportException, "Expected a NoDataToReportException, but got " + ex.getClass().getSimpleName());
+                    assertInstanceOf(NoDataToReportException.class, ex, "Expected a NoDataToReportException, but got " + ex.getClass().getSimpleName());
                     assertEquals("No data provided for report generation.", ex.getMessage());
                 });
     }
 
     @Test
-    public void generateReportInPDFShouldFailIfReportTypeNotSupported() {
+    void generateReportInPDFShouldFailIfReportTypeNotSupported() {
         createReportGenerator()
-                .generateReport(ReportType.Unsupported, createReportData())
+                .generateReport(ReportType.UNSUPPORTED, createReportData())
                 .onSuccess(Assertions::fail)
                 .onFailure(ex -> {
-                    assertTrue(ex instanceof UnsupportedReportTypeException, "Expected a NoDataToReportException, but got " + ex.getClass().getSimpleName());
+                    assertInstanceOf(UnsupportedReportTypeException.class, ex, "Expected a NoDataToReportException, but got " + ex.getClass().getSimpleName());
                     assertEquals("Report type Unsupported not supported.", ex.getMessage());
                 });
     }
