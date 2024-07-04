@@ -124,7 +124,7 @@ public class MovieStore
     {
         foreach (var movie in AllMovies.Values)
         {
-            Console.WriteLine($"ID: {movie.MovieID}, Title: {movie.Title}, Director: {movie.Director}, Available Copies: {movie.TotalCopies - movie.BorrowedCopies}");
+            Console.WriteLine($"ID: {movie.MovieId}, Title: {movie.Title}, Director: {movie.Director}, Available Copies: {movie.TotalCopies - movie.BorrowedCopies}");
         }
     }
 
