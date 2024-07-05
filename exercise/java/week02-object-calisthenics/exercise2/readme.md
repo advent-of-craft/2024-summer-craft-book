@@ -10,7 +10,7 @@ A little reminder:
    5) One Dot Per Line
    6) Don’t Abbreviate
    7) Keep All Entities Small
-   8) No More Than 2 Invariants / class
+   8) No More Than 2 Invariants per class
    9) No Getters/Setters/Properties
 
 

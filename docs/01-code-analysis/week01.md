@@ -19,43 +19,21 @@ Reading objectively and not taking immediate actions can be the key to safe refa
 
 ### Exercise 1: First things first
 
-You are about to look at a pretty complicated and big code base. Be prepared to look at the big picture before nitpicking every single details you come across.
+Exercise => Head to the /exercise folder to the week 1 - exercise 1 to get the code version
 
-What do you see? 
-
->**Write down all the things you would change and prefix them with a number.**
-
-Note: For this exercise, we recommend using the summer book but if you are using only the coding version, feel free to have your own notepad or put TODO comments in the code. It's important that you index them for the part 2 and 3.
-
-#### Supported languages
-
-Choose your stack to do this exercise
-
-- [Java](/exercise/java/week01-code-analysis/exercise/)
-- [C#](/exercise/c#/week01-code-analysis/)
-- [Kotlin](/exercise/kotlin/week01/)
-- [TypeScript](/exercise/ts/week01-code-analysis/)
-
-#### Proposed Solution
-
-- [Java](/solution/java/week01-code-analysis/exercise/)
-- [C#](/solution/c#/week01-code-analysis/)
-- [Kotlin](/solution/kotlin/week01/)
-- [TypeScript](/solution/ts/week01-code-analysis/)
+Solution => Head to the /solution folder to the week 1 - exercise 1 to get the code version
 
 ### Exercise 2: Arrange by type.
 
-Use the numbers on each smell to arrange them in three categories:
+Exercise => Head to the /exercise folder to the week 1 - exercise 1 to get the code version
 
-CS: Code smells
-I: Improvements
-V: Vulnerabilities
-
-If you are using only the coding version, prefix your TODOs with the code.
+Solution => Head to the /solution folder to the week 1 - exercise 1 to get the code version
 
 ### Exercise 3: Use your own category.
 
-You may use another system to prefix the TODOs in your code. Use your own category that seems better for you.
+Exercise => Head to the /exercise folder to the week 1 - exercise 1 to get the code version
+
+Solution => Head to the /solution folder to the week 1 - exercise 1 to get the code version
 
 ### Go further
 

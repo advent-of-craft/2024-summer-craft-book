@@ -27,61 +27,14 @@ Write down your observation about the steps above by your own experience
 
 ### Exercise 1: Fight Indentation
 
-Over indentation is at the core of accidental complexity. 
-The first thing you have to religiously go through is to avoid unnecessary indentation level.
+Exercise => Head to the /exercise folder to the week 2 - exercise 1 to get the code version
 
->**List down the steps to simplify this code?**
-
-Write down everything you can do to make this code clearer below.
-
-#### Supported languages
-
-Choose your stack to do this exercise
-
-- [Java](/exercise/java/week02-object-calisthenics/exercise1/)
-- [C#](/exercise/c#/week02-object-calisthenics/)
-- [Kotlin](/exercise/kotlin/week02-exercise1/)
-- [TypeScript](/exercise/ts/week02-object-calisthenics/exercise1/)
-
-#### Proposed Solution
-
-- [Java](/solution/java/week02-object-calisthenics/exercise1/)
-- [C#](/solution/c#/week02-object-calisthenics/)
-- [Kotlin](/solution/kotlin/week02-exercise1/)
-- [TypeScript](/solution/ts/week02-object-calisthenics/exercise1/)
+Solution => Head to the /solution folder to the week 2 - exercise 1 to get the code version
 
 ### Exercise 2: Identify the steps
 
-Identify the Object Calisthenics steps in the code below? 
+Exercise => Head to the /exercise folder to the week 2 - exercise 2 to get the code version
 
-A little reminder:
-   1) Only One Level Of Indentation
-   2) Don’t Use The ELSE Keyword
-   3) Wrap All Primitives And Strings
-   4) First Class Collections
-   5) One Dot Per Line
-   6) Don’t Abbreviate
-   7) Keep All Entities Small
-   8) No More Than 2 Invariants per class
-   9) No Getters/Setters/Properties
+Solution => Head to the /solution folder to the week 2 - exercise 2 to get the code version
 
-
->**Write a TODO to where it is in the code that does not respect a step, mark which step it is and the action you would do.**
-
-Feel free to correct the code as you see fit.
-
-#### Supported languages
-
-Choose your stack to do this exercise
-
-- [Java](/exercise/java/week02-object-calisthenics/exercise2/)
-- [C#](/exercise/c#/week02-object-calisthenics/)
-- [Kotlin](/exercise/kotlin/week02-exercise2/)
-- [TypeScript](/exercise/ts/week02-object-calisthenics/exercise2/)
-
-#### Proposed Solution
-
-- [Java](/solution/java/week02-object-calisthenics/exercise2/)
-- [C#](/solution/c#/week02-object-calisthenics/)
-- [Kotlin](/solution/kotlin/week02-exercise2/)
-- [TypeScript](/solution/ts/week02-object-calisthenics/exercise2/)
+### Go further: CQS Heuristics

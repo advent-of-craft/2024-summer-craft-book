@@ -25,9 +25,9 @@ We understand you could be busy in the summer and want to just do the practice s
 
 ## Summary
 - [Week 1: Code Analysis.](/docs/01-code-analysis/week01.md)
-- [Week 2: Fight indentation.](/docs/02-object-calisthenics/week02.md)
-- [Week 3: Fix the code.](docs/exercise/week03)
-- [Week 4: A TDD adventure.](docs/exercise/week04)
-- [Week 5: Love your code without conditions.](docs/exercise/week05)
-- [Week 6: Protect your refactoring.](docs/exercise/week06)
-- [Week 7: One and thousand tests.](docs/exercise/week07)
+- [Week 2: Object Calisthenics.](/docs/02-object-calisthenics/week02.md)
+- [Week 3: Command Query Separation.](/docs/03-cqs/week03.md)
+- [Week 4: Test Driven Development.](docs/04-tdd/week04.md)
+- [Week 5: Accidental Complexity.](docs/05-complexity/week05.md)
+- [Week 6: Legacy Code.](docs/06-legacy-code/week06.md)
+- [Week 7: Property-based Testing.](docs/07-pbt/week07.md)
