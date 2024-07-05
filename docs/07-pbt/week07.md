@@ -20,6 +20,10 @@ Exercise => Head to the /exercise folder to the week 7 - exercise 1 to get the c
 
 Solution => Head to the /solution folder to the week 7 - exercise 1 to get the code version
 
+### Game: Find the properties
+
+Exercise => Head to the /exercise folder to the week 7 - exercise 2 to get the code version
+
 ### Go Further: Property-based and TDD
 
 Using Property to drive your development with TDD can yield great results. 

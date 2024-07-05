@@ -61,6 +61,10 @@ Exercise => Head to the /exercise folder to the week 6 - exercise 2 to get the c
 
 Solution => Head to the /solution folder to the week 6 - exercise 2 to get the code version
 
+### Game: Smell to score
+
+Exercise => Head to the /exercise folder to the week 6 - exercise 3 to get the code version
+
 ### Go Further: Other Techniques for Testing Legacy Code
 
 Often, you won't be able to test your code without making changes to it. Thus, you want to identify the steps you can take in your code that won't change its behavior.
