@@ -4,16 +4,16 @@ namespace ExerciseMovieStore.Tests;
 
 public class MovieStoreTest
 {
-    private MovieStore store;
+    private readonly MovieStore store;
 
     public MovieStoreTest()
     {
+        store = new MovieStore();
         SetUp();
     }
 
     private void SetUp()
     {
-        store = new MovieStore();
         store.AddMovie("001", "Inception", "Christopher Nolan", 10, 0d);
         store.AddMovie("002", "The Matrix", "Lana Wachowski, Lilly Wachowski", 8, 0d);
         store.AddMovie("003", "Dunkirk", "Christopher Nolan", 5, 0d);

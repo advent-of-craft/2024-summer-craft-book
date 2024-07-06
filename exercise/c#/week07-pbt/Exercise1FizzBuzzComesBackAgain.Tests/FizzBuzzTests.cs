@@ -1,7 +1,7 @@
 using FluentAssertions.LanguageExt;
 using Xunit;
 
-namespace ExerciseFizzBuzzComesBackAgain.Tests
+namespace Exercise1FizzBuzzComesBackAgain.Tests
 {
     public class FizzBuzzTests
     {

@@ -1,4 +1,6 @@
-﻿namespace ExerciseMovieStore;
+﻿using System.Linq;
+
+namespace ExerciseMovieStore;
 
 public class MovieStore
 {
@@ -130,14 +132,10 @@ public class MovieStore
 
     public List<Movie> FindMoviesByTitle(string title)
     {
-        List<Movie> result = new List<Movie>();
-        foreach (var movie in AllMovies.Values)
-        {
-            if (movie.Title.Equals(title, StringComparison.OrdinalIgnoreCase))
-            {
-                result.Add(movie);
-            }
-        }
-        return result;
+        return AllMovies
+            .Values
+            .Where(movie => 
+                movie.Title.Equals(title, StringComparison.OrdinalIgnoreCase))
+            .ToList();
     }
 }

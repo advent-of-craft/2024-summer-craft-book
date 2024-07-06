@@ -24,4 +24,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Exercise1FizzBuzzComesBackAgain\Exercise1FizzBuzzComesBackAgain.csproj" />
+    </ItemGroup>
+
 </Project>
