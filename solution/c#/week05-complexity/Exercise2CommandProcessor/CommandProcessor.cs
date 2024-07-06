@@ -1,4 +1,4 @@
-﻿namespace Command;
+﻿namespace Exercise2CommandProcessor;
 
 public class CommandProcessor
 {
@@ -16,13 +16,9 @@ public class CommandProcessor
 
     public void ProcessCommand(string commandName, Action<string> printTo)
     {
-        if (commands.TryGetValue(commandName, out var cmd))
-        {
-            printTo(cmd.ExecuteAndDisplayResult());
-        }
-        else
-        {
-            printTo("Command not recognized.");
-        }
+        printTo(
+            commands.TryGetValue(commandName, out var cmd)
+                ? cmd.ExecuteAndDisplayResult()
+                : "Command not recognized.");
     }
 }

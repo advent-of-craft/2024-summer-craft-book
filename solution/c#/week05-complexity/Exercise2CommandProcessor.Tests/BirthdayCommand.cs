@@ -1,4 +1,4 @@
-﻿namespace Command.Tests;
+﻿namespace Exercise2CommandProcessor.Tests;
 
 public class BirthdayCommand(Func<DateTime> todaySupplier, DateTime birthday) : ICommand
 {

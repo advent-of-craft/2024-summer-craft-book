@@ -1,6 +1,6 @@
-﻿namespace Command.Tests;
+﻿using LanguageExt;
 
-using LanguageExt;
+namespace Exercise2CommandProcessor.Tests;
 
 public class FakeOutputAdapter
 {

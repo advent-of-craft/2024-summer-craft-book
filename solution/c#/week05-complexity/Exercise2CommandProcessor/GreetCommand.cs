@@ -1,4 +1,4 @@
-﻿namespace Command;
+﻿namespace Exercise2CommandProcessor;
 
 public class GreetCommand(string firstName, string lastName) : ICommand
 {

@@ -1,6 +1,6 @@
-﻿namespace Command;
+﻿namespace Exercise2CommandProcessor;
 
-public class HelpCommand(HashSet<string> commandsName) : ICommand
+public class HelpCommand(IEnumerable<string> commandsName) : ICommand
 {
     public string ExecuteAndDisplayResult()
     {
