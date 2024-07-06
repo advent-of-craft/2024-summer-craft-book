@@ -4,8 +4,8 @@ namespace Exercise1Documents
     {
         private static readonly Template Spec = new(DocumentTemplate.SPEC, RecordType.All, "SPEC");
 
-        private static readonly IEnumerable<Template> Registry = new[]
-        {
+        private static readonly IEnumerable<Template> Registry = [
+        
             new Template(DocumentTemplate.DEERPP, RecordType.IndividualProspect, "DEER"),
             new Template(DocumentTemplate.DEERPM, RecordType.LegalProspect, "DEER"),
             new Template(DocumentTemplate.AUTP, RecordType.IndividualProspect, "AUTP"),
@@ -13,7 +13,7 @@ namespace Exercise1Documents
             Spec,
             new Template(DocumentTemplate.GLPP, RecordType.IndividualProspect, "GLPP"),
             new Template(DocumentTemplate.GLPM, RecordType.LegalProspect, "GLPM")
-        };
+        ];
 
         private static string FormatKey(string documentType, string recordType)
             => documentType.ToUpper() + "-" + recordType.ToUpper();

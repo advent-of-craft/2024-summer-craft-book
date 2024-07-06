@@ -42,7 +42,7 @@ public class BookStoreTest
     public void DoesNotAddBookToStoreIfInvalidAuthor()
     {
         string title = "Lord of the ring";
-        string invalidAuthor = null;
+        string? invalidAuthor = null;
 
         _store.AddBook(title, invalidAuthor, 2);
 
