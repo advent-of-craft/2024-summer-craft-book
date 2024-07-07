@@ -1,4 +1,4 @@
-﻿namespace Exercise2CommandProcessor
+﻿namespace CommandProcessor
 {
     public interface ICommand
     {
