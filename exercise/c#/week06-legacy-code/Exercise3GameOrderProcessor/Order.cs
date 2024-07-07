@@ -1,21 +1,22 @@
-﻿namespace Exercise3GameOrderProcessor;
-
-public class Order(int status, int items, double total)
+﻿namespace Exercise3GameOrderProcessor
 {
-    public const int UNPROCESSED = 0;
-    public const int PROCESSED = 1;
-
-    public int Status
+    public class Order(int status, int items, double total)
     {
-        get => status;
-        set => status = value;
-    }
+        public const int UNPROCESSED = 0;
+        public const int PROCESSED = 1;
 
-    public int Items => items;
+        public int Status
+        {
+            get => status;
+            set => status = value;
+        }
 
-    public double Total
-    {
-        get => total;
-        set => total = value;
+        public int Items => items;
+
+        public double Total
+        {
+            get => total;
+            set => total = value;
+        }
     }
 }

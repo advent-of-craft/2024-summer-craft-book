@@ -1,6 +1,7 @@
-﻿namespace Exercise2CommandProcessor;
-
-public interface ICommand
+﻿namespace Exercise2CommandProcessor
 {
-    string ExecuteAndDisplayResult();
+    public interface ICommand
+    {
+        string ExecuteAndDisplayResult();
+    }
 }

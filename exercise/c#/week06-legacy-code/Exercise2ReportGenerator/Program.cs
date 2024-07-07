@@ -1,7 +1,7 @@
-﻿namespace Exercise2ReportGenerator;
-
-public static class Program {
-    public static void Main(string[] args) {
+﻿namespace Exercise2ReportGenerator
+{
+    public static class Program {
+        public static void Main(string[] args) {
         var generator = new ReportGenerator();
         List<ReportData> data = [
             new ReportData(1, 100.0, "Sample Data 1"),
@@ -9,5 +9,6 @@ public static class Program {
         ];
         generator.GenerateReport("CSV", data);
         generator.GenerateReport("PDF", data);
+    }
     }
 }

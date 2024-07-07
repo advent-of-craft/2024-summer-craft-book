@@ -1,8 +1,8 @@
-﻿namespace Exercise3GameOrderProcessor;
-
-public class OrderProcessor
+﻿namespace Exercise3GameOrderProcessor
 {
-    public void ProcessOrders(List<Order> orders)
+    public class OrderProcessor
+    {
+        public void ProcessOrders(List<Order> orders)
     {
         foreach (var item in orders)
         {
@@ -16,5 +16,6 @@ public class OrderProcessor
                 item.Status = Order.PROCESSED;
             }
         }
+    }
     }
 }

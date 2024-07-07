@@ -1,10 +1,10 @@
-﻿namespace Exercise2CommandProcessor.Tests;
-
-public class BirthdayCommand(Func<DateTime> todaySupplier, DateTime birthday) : ICommand
+﻿namespace Exercise2CommandProcessor.Tests
 {
-    private readonly DateTime today = todaySupplier();
+    public class BirthdayCommand(Func<DateTime> todaySupplier, DateTime birthday) : ICommand
+    {
+        private readonly DateTime today = todaySupplier();
 
-    public string ExecuteAndDisplayResult()
+        public string ExecuteAndDisplayResult()
     {
         var daysBetween = (birthday - today).Days;
         if (daysBetween < 0)  // If birthday passed this year
@@ -14,5 +14,6 @@ public class BirthdayCommand(Func<DateTime> todaySupplier, DateTime birthday) : 
             daysBetween = (nextBirthday - today).Days;
         }
         return $"Still {daysBetween} days left!";
+    }
     }
 }

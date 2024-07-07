@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ExerciseMovieStore\ExerciseMovieStore.csproj" />
+      <ProjectReference Include="..\MovieStore\MovieStore.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,10 +1,11 @@
-﻿namespace Exercise2BookStore;
-
-public class BookInventory : List<Book>
+﻿namespace Exercise2BookStore
 {
-    public void RemoveBookIfNoMoreCopies(Book book) {
+    public class BookInventory : List<Book>
+    {
+        public void RemoveBookIfNoMoreCopies(Book book) {
         if (!book.HasCopies()) {
             Remove(book);
         }
+    }
     }
 }

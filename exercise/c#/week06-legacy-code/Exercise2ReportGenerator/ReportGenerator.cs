@@ -1,35 +1,35 @@
-﻿namespace Exercise2ReportGenerator;
-
-
-class ReportGenerator
+﻿namespace Exercise2ReportGenerator
 {
-    public void GenerateReport(string reportType, List<ReportData> data)
+    class ReportGenerator
     {
-        if (reportType == "CSV")
+        public void GenerateReport(string reportType, List<ReportData> data)
         {
-            Console.WriteLine("Starting CSV Report Generation...");
-            Console.WriteLine("CSV Header: ID, Value, Description");
-            foreach (var d in data)
+            if (reportType == "CSV")
             {
-                Console.WriteLine($"{d.getId()},{d.getValue()},{d.getDescription()}");
+                Console.WriteLine("Starting CSV Report Generation...");
+                Console.WriteLine("CSV Header: ID, Value, Description");
+                foreach (var d in data)
+                {
+                    Console.WriteLine($"{d.getId()},{d.getValue()},{d.getDescription()}");
+                }
+                Console.WriteLine("CSV Report Generated Successfully.");
             }
-            Console.WriteLine("CSV Report Generated Successfully.");
-        }
-        else if (reportType == "PDF")
-        {
-            Console.WriteLine("Starting PDF Report Generation...");
-            Console.WriteLine("PDF Report Title: Comprehensive Data Report");
-            Console.WriteLine("------------------------------------------------");
-            foreach (var d in data)
+            else if (reportType == "PDF")
             {
-                Console.WriteLine($"Data ID: {d.getId()} | Data Value: {d.getValue()} | Description: {d.getDescription()}");
+                Console.WriteLine("Starting PDF Report Generation...");
+                Console.WriteLine("PDF Report Title: Comprehensive Data Report");
+                Console.WriteLine("------------------------------------------------");
+                foreach (var d in data)
+                {
+                    Console.WriteLine($"Data ID: {d.getId()} | Data Value: {d.getValue()} | Description: {d.getDescription()}");
+                }
+                Console.WriteLine("------------------------------------------------");
+                Console.WriteLine("PDF Report Generated Successfully.");
             }
-            Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("PDF Report Generated Successfully.");
-        }
-        else
-        {
-            Console.WriteLine($"Report type {reportType} not supported.");
+            else
+            {
+                Console.WriteLine($"Report type {reportType} not supported.");
+            }
         }
     }
 }

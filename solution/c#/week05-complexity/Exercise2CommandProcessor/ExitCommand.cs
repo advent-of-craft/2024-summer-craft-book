@@ -1,9 +1,10 @@
-﻿namespace Exercise2CommandProcessor;
-
-public class ExitCommand : ICommand
+﻿namespace Exercise2CommandProcessor
 {
-    public string ExecuteAndDisplayResult()
+    public class ExitCommand : ICommand
+    {
+        public string ExecuteAndDisplayResult()
     {
         return "Goodbye!";
+    }
     }
 }

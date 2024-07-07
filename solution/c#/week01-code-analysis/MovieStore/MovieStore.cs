@@ -1,27 +1,34 @@
-﻿using System.Linq;
-
-namespace ExerciseMovieStore;
-
-public class MovieStore
+﻿namespace MovieStore
 {
-    public Dictionary<string, Movie> AllMovies { get; set; }
-    public StoreAccount Sales { get; set; }
-
-    public MovieStore()
+    //SPR violation: the movie store has too many responsibilities
+    public class MovieStore
     {
+        //inconsistent naming
+        //Bad encapsulation: public field
+        public Dictionary<string, Movie> AllMovies { get; set; }
+        //confusing naming
+        //Bad encapsulation: public field
+        public StoreAccount Sales { get; set; }
+
+        public MovieStore()
+    {
+        //we could inject some of the dependencies
         AllMovies = new Dictionary<string, Movie>();
         Sales = new StoreAccount();
     }
 
-    public void BuyMovie(string customer, string id)
+        public void BuyMovie(string customer, string id)
     {
-        if (AllMovies.TryGetValue(id, out Movie movie))
+        if (AllMovies.TryGetValue(id, out var movie))
         {
             if (movie.TotalCopies - movie.BorrowedCopies > 0)
             {
+                //Implementation leak: accessing fields of movie
                 movie.TotalCopies--;
+                //Level of indentation too complex
                 if (movie.CanSell())
                 {
+                    //Argument switching between customer and movie. Can lead to error passing arguments.
                     Sales.Sell(movie, customer);
                 }
                 else
@@ -36,12 +43,17 @@ public class MovieStore
         }
         else
         {
+            //movie store logic tie to the console
+            //error handling using the console is a bad practice
             Console.WriteLine("Movie not available!");
         }
     }
 
-    public void AddMovie(string id, string title, string director, int totalCopies, double unitPrice)
+        //Risk: we can add a movie with empty spaces as title?
+        //Maintenance overhead: the number of parameters is high. Passing a movie instead?
+        public void AddMovie(string id, string title, string director, int totalCopies, double unitPrice)
     {
+        //Confusing name: the name of the method does not say what it does (update copies and add movies).
         if (AllMovies.ContainsKey(id))
         {
             Console.WriteLine("Movie already exists! Updating total copies.");
@@ -53,9 +65,10 @@ public class MovieStore
         }
     }
 
-    public void UpdateMovieCopies(string id, int newTotalCopies)
+        public void UpdateMovieCopies(string id, int newTotalCopies)
     {
-        if (AllMovies.TryGetValue(id, out Movie movie))
+        //Performance: possibly multiple iterations
+        if (AllMovies.TryGetValue(id, out var movie))
         {
             if (newTotalCopies < movie.BorrowedCopies)
             {
@@ -72,7 +85,7 @@ public class MovieStore
         }
     }
 
-    public void RemoveMovie(string id)
+        public void RemoveMovie(string id)
     {
         if (AllMovies.ContainsKey(id))
         {
@@ -84,9 +97,10 @@ public class MovieStore
         }
     }
 
-    public void BorrowMovie(string id)
+        public void BorrowMovie(string id)
     {
-        if (AllMovies.TryGetValue(id, out Movie movie))
+        //Duplication: the research and check if a copy is available is duplicated in the buyMovie method
+        if (AllMovies.TryGetValue(id, out var movie))
         {
             if (movie.TotalCopies - movie.BorrowedCopies > 0)
             {
@@ -103,9 +117,10 @@ public class MovieStore
         }
     }
 
-    public void ReturnMovie(string id)
+        //Return, Borrow and Buy movie can be streamlined
+        public void ReturnMovie(string id)
     {
-        if (AllMovies.TryGetValue(id, out Movie movie))
+        if (AllMovies.TryGetValue(id, out var movie))
         {
             if (movie.BorrowedCopies > 0)
             {
@@ -122,7 +137,8 @@ public class MovieStore
         }
     }
 
-    public void DisplayMovies()
+        //Dead code? the method is never used, never tested
+        public void DisplayMovies()
     {
         foreach (var movie in AllMovies.Values)
         {
@@ -130,12 +146,19 @@ public class MovieStore
         }
     }
 
-    public List<Movie> FindMoviesByTitle(string title)
+        //Risk: no early return if, say, title is an empty string
+        public List<Movie> FindMoviesByTitle(string title)
     {
-        return AllMovies
-            .Values
-            .Where(movie => 
-                movie.Title.Equals(title, StringComparison.OrdinalIgnoreCase))
-            .ToList();
+        List<Movie> result = new List<Movie>();
+        foreach (var movie in AllMovies.Values)
+        {
+            //Bug: the research by title is case-sensitive
+            if (movie.Title.Equals(title, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Add(movie);
+            }
+        }
+        return result;
+    }
     }
 }

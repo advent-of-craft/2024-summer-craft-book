@@ -1,19 +1,20 @@
 ﻿using LanguageExt;
 
-namespace Exercise2CommandProcessor.Tests;
-
-public class FakeOutputAdapter
+namespace Exercise2CommandProcessor.Tests
 {
-    private Lst<string> allOutputs = Lst<string>.Empty;
+    public class FakeOutputAdapter
+    {
+        private Lst<string> allOutputs = Lst<string>.Empty;
 
-    public string GetAllOutputs()
+        public string GetAllOutputs()
     {
         return string.Join("\n", allOutputs);
     }
 
-    public void SendOut(string message)
+        public void SendOut(string message)
     {
         allOutputs = allOutputs.Add(message);
     }
 
+    }
 }

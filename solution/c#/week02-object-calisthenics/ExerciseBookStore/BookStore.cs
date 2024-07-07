@@ -1,9 +1,9 @@
-﻿namespace Exercise2BookStore;
+﻿namespace Exercise2BookStore
+{
+    public class BookStore {
+        private readonly BookInventory _inventory = [];
 
-public class BookStore {
-    private readonly BookInventory _inventory = [];
-
-    public void AddBook(string? title, string? author, int copies) {
+        public void AddBook(string? title, string? author, int copies) {
         if (copies <= 0)
             return;
 
@@ -18,7 +18,7 @@ public class BookStore {
         }
     }
 
-    public void SellBook(string title, string author, int copies) {
+        public void SellBook(string title, string author, int copies) {
         if (copies <= 0)
             return;
 
@@ -29,8 +29,9 @@ public class BookStore {
         }
     }
 
-    protected Book? GetBookBy(string? title, string? author) {
+        protected Book? GetBookBy(string? title, string? author) {
         return _inventory.Find(b =>
             b.GetTitle() == title && b.GetAuthor() == author);
+    }
     }
 }

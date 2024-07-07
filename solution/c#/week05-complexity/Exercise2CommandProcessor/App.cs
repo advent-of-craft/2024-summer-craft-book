@@ -1,8 +1,8 @@
-﻿namespace Exercise2CommandProcessor;
-
-public static class App
+﻿namespace Exercise2CommandProcessor
 {
-    public static void Main()
+    public static class App
+    {
+        public static void Main()
     {
         var processor = new CommandProcessor();
         // Create and register commands
@@ -14,5 +14,6 @@ public static class App
         processor.ProcessCommand("exit", Console.WriteLine);   // Outputs: Goodbye!
         processor.ProcessCommand("help", Console.WriteLine);   // Outputs: Should be all commands' description
         processor.ProcessCommand("invalid", Console.WriteLine);   // Outputs: Command not recognized.
+    }
     }
 }

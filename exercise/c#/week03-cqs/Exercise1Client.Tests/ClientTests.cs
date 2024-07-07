@@ -2,9 +2,9 @@ using Exercise1Client.Accountability;
 using FluentAssertions;
 using Xunit;
 
-namespace ExerciseClient.Tests;
-
-public class ClientTests
+namespace ExerciseClient.Tests
+{
+    public class ClientTests
 {
     private readonly Client _client = new(new Dictionary<string, double>
     {
@@ -28,5 +28,6 @@ public class ClientTests
             Interstellar for 23.98€
             Total : 130.97€
             """);
+    }
     }
 }
