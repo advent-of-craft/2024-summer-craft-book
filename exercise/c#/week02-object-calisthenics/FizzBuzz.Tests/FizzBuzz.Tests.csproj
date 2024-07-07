@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Exercise2BookStore\Exercise2BookStore.csproj" />
+      <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj" />
     </ItemGroup>
 
 </Project>

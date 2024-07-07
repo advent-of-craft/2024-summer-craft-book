@@ -1,7 +1,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace Exercise1FizzBuzz.Tests
+namespace FizzBuzz.Tests
 {
     public class FizzBuzzTests
     {
