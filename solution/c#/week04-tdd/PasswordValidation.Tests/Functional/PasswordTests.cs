@@ -1,10 +1,10 @@
-using ExercisePasswordValidation.Functional;
+using PasswordValidation.Functional;
 using FluentAssertions;
 using FluentAssertions.LanguageExt;
 using LanguageExt.UnsafeValueAccess;
 using Xunit;
 
-namespace ExercisePasswordValidation.Tests.Functional
+namespace PasswordValidation.Tests.Functional
 {
     public class PasswordTests
     {

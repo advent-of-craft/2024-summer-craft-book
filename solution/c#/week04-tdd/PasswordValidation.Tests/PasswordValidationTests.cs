@@ -1,7 +1,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace ExercisePasswordValidation.Tests
+namespace PasswordValidation.Tests
 {
     public class PasswordValidationTests
     {

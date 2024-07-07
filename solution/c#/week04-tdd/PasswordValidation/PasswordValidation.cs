@@ -1,4 +1,4 @@
-namespace ExercisePasswordValidation
+namespace PasswordValidation
 {
     public static class PasswordValidation
     {

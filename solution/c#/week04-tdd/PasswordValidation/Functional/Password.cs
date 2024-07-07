@@ -1,9 +1,9 @@
 using System.Text.RegularExpressions;
 using LanguageExt;
-using static LanguageExt.Option<ExercisePasswordValidation.Functional.ParsingError>;
+using static LanguageExt.Option<PasswordValidation.Functional.ParsingError>;
 using static LanguageExt.Seq;
 
-namespace ExercisePasswordValidation.Functional
+namespace PasswordValidation.Functional
 {
     public sealed class Password : IComparable<Password>, IEquatable<Password>, IComparable
     {

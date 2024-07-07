@@ -37,9 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cache", "week03-cqs\Cache\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cache.Tests", "week03-cqs\Cache.Tests\Cache.Tests.csproj", "{DBFA76DB-411F-4445-B4E0-EB6C26919D8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercisePasswordValidation", "week04-tdd\ExercisePasswordValidation\ExercisePasswordValidation.csproj", "{0BEC2B2E-13E3-4169-B2A0-BB9F3D5BABAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordValidation", "week04-tdd\PasswordValidation\PasswordValidation.csproj", "{0BEC2B2E-13E3-4169-B2A0-BB9F3D5BABAA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercisePasswordValidation.Tests", "week04-tdd\ExercisePasswordValidation.Tests\ExercisePasswordValidation.Tests.csproj", "{8704FFD5-EF33-4695-9A1C-CA6A6D1ED2B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordValidation.Tests", "week04-tdd\PasswordValidation.Tests\PasswordValidation.Tests.csproj", "{8704FFD5-EF33-4695-9A1C-CA6A6D1ED2B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise1FizzBuzzComesBack", "week05-complexity\Exercise1FizzBuzzComesBack\Exercise1FizzBuzzComesBack.csproj", "{9375922F-D6A3-4ABD-9517-99ECE52CFD23}"
 EndProject
