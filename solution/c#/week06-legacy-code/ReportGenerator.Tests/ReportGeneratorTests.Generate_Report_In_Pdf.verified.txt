@@ -1,0 +1,7 @@
+﻿Starting PDF Report Generation...
+PDF Report Title: Comprehensive Data Report
+------------------------------------------------
+Data ID: 1 | Data Value: 100 | Description: Sample Data 1
+Data ID: 2 | Data Value: 200 | Description: Sample Data 2
+------------------------------------------------
+PDF Report Generated Successfully.

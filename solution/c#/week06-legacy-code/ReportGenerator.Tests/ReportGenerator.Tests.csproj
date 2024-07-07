@@ -11,21 +11,28 @@
 
     <ItemGroup>
         <PackageReference Include="FluentAssertions" Version="6.12.0"/>
-        <PackageReference Include="FluentAssertions.LanguageExt" Version="0.5.0" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-        <PackageReference Include="xunit" Version="2.6.4" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
+        <PackageReference Include="FluentAssertions.LanguageExt" Version="0.5.0"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0"/>
+        <PackageReference Include="Verify.Xunit" Version="25.3.0"/>
+        <PackageReference Include="xunit" Version="2.8.1"/>
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.8.1">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="coverlet.collector" Version="6.0.0">
+        <PackageReference Include="coverlet.collector" Version="6.0.2">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ReportGenerator\ReportGenerator.csproj" />
+        <ProjectReference Include="..\ReportGenerator\ReportGenerator.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="ReportGeneratorTests.Generate_Report_In_Csv.verified.txt">
+        <DependentUpon>ReportGeneratorTests.cs</DependentUpon>
+      </None>
     </ItemGroup>
 
 </Project>
