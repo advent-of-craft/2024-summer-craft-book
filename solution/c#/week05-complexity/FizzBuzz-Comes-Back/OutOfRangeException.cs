@@ -1,4 +1,4 @@
-namespace Exercise1FizzBuzzComesBack
+namespace FizzBuzz
 {
     public sealed class OutOfRangeException : ArgumentException
     {

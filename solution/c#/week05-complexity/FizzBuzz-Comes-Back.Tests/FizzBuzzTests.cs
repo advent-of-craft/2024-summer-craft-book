@@ -1,3 +1,4 @@
+using FizzBuzz;
 using FluentAssertions;
 using Xunit;
 
@@ -19,7 +20,7 @@ namespace Exercise1FizzBuzzComesBack.Tests
         [InlineData(30, "FizzBuzz")]
         [InlineData(45, "FizzBuzz")]
         public void Returns_Number_Representation(int input, string expectedResult)
-            => FizzBuzz.Convert(input)
+            => FizzBuzz.FizzBuzz.Convert(input)
                 .Should()
                 .Be(expectedResult);
 
@@ -28,7 +29,7 @@ namespace Exercise1FizzBuzzComesBack.Tests
         [InlineData(101)]
         [InlineData(-1)]
         public void Fails_For_Numbers_Out_Of_Range(int input)
-            => ((Action) (() => FizzBuzz.Convert(input)))
+            => ((Action) (() => FizzBuzz.FizzBuzz.Convert(input)))
                 .Should()
                 .Throw<OutOfRangeException>();
     }
