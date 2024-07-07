@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Exercise2Cache\Exercise2Cache.csproj" />
+        <ProjectReference Include="..\Cache\Cache.csproj" />
     </ItemGroup>
 
 </Project>

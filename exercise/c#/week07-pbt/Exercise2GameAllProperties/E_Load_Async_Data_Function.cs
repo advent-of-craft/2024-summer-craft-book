@@ -1,4 +1,6 @@
-﻿public class E_Load_Async_Data_Function
+﻿namespace Exercise2GameAllProperties;
+
+public class E_Load_Async_Data_Function
 {
     public async Task<string> LoadDataAsync(string url)
     {

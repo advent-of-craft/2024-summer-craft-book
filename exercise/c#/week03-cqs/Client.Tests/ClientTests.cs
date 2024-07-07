@@ -1,12 +1,11 @@
-using Exercise1Client.Accountability;
 using FluentAssertions;
 using Xunit;
 
-namespace ExerciseClient.Tests
+namespace Client.Tests
 {
     public class ClientTests
 {
-    private readonly Client _client = new(new Dictionary<string, double>
+    private readonly Client.Accountability.Client _client = new(new Dictionary<string, double>
     {
         {"Tenet Deluxe Edition", 45.99},
         {"Inception", 30.50},

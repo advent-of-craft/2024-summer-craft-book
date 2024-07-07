@@ -1,4 +1,6 @@
-﻿public class D_Filter_Even_Numbers_Function
+﻿namespace Exercise2GameAllProperties;
+
+public class D_Filter_Even_Numbers_Function
 {
     public int[] FilterEvenNumbers(int[] array)
     {

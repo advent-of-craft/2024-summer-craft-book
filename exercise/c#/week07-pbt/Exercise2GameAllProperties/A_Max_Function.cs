@@ -1,4 +1,6 @@
-﻿public class A_Max_Function
+﻿namespace Exercise2GameAllProperties;
+
+public class A_Max_Function
 {
     public int Max(int a, int b)
     {

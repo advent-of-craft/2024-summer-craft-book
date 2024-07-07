@@ -2,7 +2,7 @@ using static System.Environment;
 using static System.Globalization.CultureInfo;
 using static System.String;
 
-namespace Exercise1Client.Accountability
+namespace Client.Accountability
 {
     public class Client(IReadOnlyDictionary<string, double> orderLines)
     {
