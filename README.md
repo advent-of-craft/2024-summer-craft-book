@@ -32,6 +32,11 @@ You can grab your copy of our `Summer Craft Book` here:
 
 [![Summer Craft Book](docs/img/cover.webp)](files/summer-craft-book-2024.pdf)
 
+### Miro board
+Alternatively, you can use the miro board template available [here](https://miro.com/app/board/uXjVK056f4o=/?share_link_id=201408685412) or by using the backup file available [here](files/summer-craft-book-2024-miro.rtb).
+
+[![Miro board](docs/img/miro-board.webp)](https://miro.com/app/board/uXjVK056f4o=/?share_link_id=201408685412)
+
 ## Summary
 - [Week 1: Code Analysis.](/docs/01-code-analysis/week01.md)
 - [Week 2: Object Calisthenics.](/docs/02-object-calisthenics/week02.md)
