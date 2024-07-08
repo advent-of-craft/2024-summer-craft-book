@@ -60,7 +60,7 @@ class ReportGeneratorTests {
                 .onSuccess(Assertions::fail)
                 .onFailure(ex -> {
                     assertInstanceOf(UnsupportedReportTypeException.class, ex, "Expected a NoDataToReportException, but got " + ex.getClass().getSimpleName());
-                    assertEquals("Report type Unsupported not supported.", ex.getMessage());
+                    assertEquals("Report type UNSUPPORTED not supported.", ex.getMessage());
                 });
     }
 }
