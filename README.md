@@ -25,6 +25,13 @@ We understand you could be busy in the summer and want to just do the practice s
 
 ![Summer of Craft](docs/img/summer-of-craft.webp)
 
+## The Book
+You can grab your copy of our `Summer Craft Book` here:
+- [Digital copy](files/summer-craft-book-2024.pdf)
+- [Printable version](files/summer-craft-book-print-2024.pdf)
+
+[![Summer Craft Book](docs/img/cover.webp)](files/summer-craft-book-2024.pdf)
+
 ## Summary
 - [Week 1: Code Analysis.](/docs/01-code-analysis/week01.md)
 - [Week 2: Object Calisthenics.](/docs/02-object-calisthenics/week02.md)
