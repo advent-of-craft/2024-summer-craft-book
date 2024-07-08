@@ -5,7 +5,7 @@
 
 [![License](https://img.shields.io/github/license/advent-of-craft/advent-of-craft.svg)](https://github.com/advent-of-craft/2024-summer-craft-book/blob/main/LICENSE)
 
-This year, we are launching our version of the summer holiday workbook around the craft called the **Summer Craft Book**.
+This year, we are launching our version of the summer holiday workbook around `Software Craftsmanship` called the **Summer Craft Book**.
 
 Please, download the PDF of the Summer Craft Book in this repository to get the most out of it.
 
@@ -19,9 +19,11 @@ We wouldn't want your craft skills to go to waste !
 
 ## About this repository
 
-As with the Advent of Craft edition, the PDF of the Summer Craft Book comes with this github repository. Each exercise and most of the games are in it so you could use the repository standalone.
+As with the Advent of Craft edition, the PDF of the Summer Craft Book comes with this github repository. Each exercise and most of the games are in it, so you could use the repository standalone.
 
 We understand you could be busy in the summer and want to just do the practice so don't hesitate to do just that !
+
+![Summer of Craft](docs/img/summer-of-craft.webp)
 
 ## Summary
 - [Week 1: Code Analysis.](/docs/01-code-analysis/week01.md)
@@ -31,3 +33,12 @@ We understand you could be busy in the summer and want to just do the practice s
 - [Week 5: Accidental Complexity.](docs/05-complexity/week05.md)
 - [Week 6: Legacy Code.](docs/06-legacy-code/week06.md)
 - [Week 7: Property-based Testing.](docs/07-pbt/week07.md)
+
+## Join us on Discord
+
+To facilitate the communication and share your ideas around the different weeks, we invite you to join our `Discord` by simply clicking [here](https://discord.gg/E5Z9s9UKTS).
+
+![Discord Advent Of Craft](docs/img/discord.webp)
+
+## Available languages
+Here are the supported languages: `java`, `C#`, `kotlin`, `typescript`
