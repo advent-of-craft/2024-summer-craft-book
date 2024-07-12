@@ -27,7 +27,6 @@ We understand you could be busy in the summer and want to just do the practice s
 
 ## The Book
 You can grab your copy of our `Summer Craft Book` here:
-- [Digital copy DOWNLOAD](files/summer-craft-book-2024.pdf){:download}
 - [Digital copy](files/summer-craft-book-2024.pdf)
 - [Printable version](files/summer-craft-book-print-2024.pdf)
 
