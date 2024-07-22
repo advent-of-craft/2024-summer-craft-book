@@ -27,13 +27,13 @@ We understand you could be busy in the summer and want to just do the practice s
 
 ## The Book
 You can grab your copy of our `Summer Craft Book` here:
-- [Digital copy](files/summer-craft-book-2024.pdf)
-- [Printable version](files/summer-craft-book-print-2024.pdf)
+- [Digital copy](https://drive.google.com/file/d/16BrF17jEMr6Sleonnq6xSafWMHA5_q1Y/view?usp=drive_link)
+- [Printable version](https://drive.google.com/file/d/1yG6ALvJyf3y5LCWF38VlzW7D2APaGZRK/view?usp=sharing)
 
-[![Summer Craft Book](docs/img/cover.webp)](files/summer-craft-book-2024.pdf)
+[![Summer Craft Book](docs/img/cover.webp)](https://drive.google.com/file/d/16BrF17jEMr6Sleonnq6xSafWMHA5_q1Y/view?usp=drive_link)
 
 ### Miro board
-Alternatively, you can use the miro board template available [here](https://miro.com/app/board/uXjVK056f4o=/?share_link_id=201408685412) or by using the backup file available [here](files/summer-craft-book-2024-miro.rtb).
+Alternatively, you can use the miro board template available [here](https://miro.com/app/board/uXjVK056f4o=/?share_link_id=201408685412) or by using the backup file available [here](https://drive.google.com/file/d/1laWnvAk8AnQ00QlaepzF3hTO2a8UR-Wg/view?usp=sharing).
 
 [![Miro board](docs/img/miro-board.webp)](https://miro.com/app/board/uXjVK056f4o=/?share_link_id=201408685412)
 
@@ -50,7 +50,7 @@ Alternatively, you can use the miro board template available [here](https://miro
 
 To facilitate the communication and share your ideas around the different weeks, we invite you to join our `Discord` by simply clicking [here](https://discord.gg/E5Z9s9UKTS).
 
-![Discord Advent Of Craft](docs/img/discord.webp)
+[![Discord Advent Of Craft](docs/img/discord.webp)](https://discord.gg/E5Z9s9UKTS)
 
 ## Available languages
-Here are the supported languages: `java`, `C#`, `kotlin`, `typescript`
+Here are the supported programming languages: `java`, `C#`, `kotlin`, `typescript`.

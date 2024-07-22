@@ -1,2 +1,0 @@
-*.pdf filter=lfs diff=lfs merge=lfs -text
-*.rtb filter=lfs diff=lfs merge=lfs -text
