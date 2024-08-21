@@ -8,7 +8,7 @@ When we think of legacy code, we usually think of an old technology, monolith ar
 
 Yet, we all do hot-fixes, sometimes on a daily basis without tests and instantly add to the technical debt of our project. Wouldn't you say this is legacy code?
 
-As Martin Fowler puts it in his bool, Working effectively with Legacy Code:
+As Michael Feathers puts it in his book, Working effectively with Legacy Code:
 
         “To me, legacy code is simply code without tests.”
 
