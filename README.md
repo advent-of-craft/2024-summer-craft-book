@@ -3,7 +3,7 @@
 [![Our Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/E5Z9s9UKTS)
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/advent-of-craft)
 
-[![License](https://img.shields.io/github/license/advent-of-craft/advent-of-craft.svg)](https://github.com/advent-of-craft/2024-summer-craft-book/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/advent-of-craft/2024-summer-craft-book.svg)](https://github.com/advent-of-craft/2024-summer-craft-book/blob/main/LICENSE)
 
 This year, we are launching our version of the summer holiday workbook around `Software Craftsmanship` called the **Summer Craft Book**.
 
